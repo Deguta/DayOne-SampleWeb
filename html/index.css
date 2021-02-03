@@ -93,7 +93,6 @@ nav {
 }
 
 /* informationのCSS */
-
 .information-box {
   text-align:center;
   border:solid;
@@ -114,6 +113,8 @@ nav {
 }
 /* informationのCSS 終了 */
 
+
+/* contentのCSS 終了 */
 .content {
   display: flex;
   justify-content: space-around;
@@ -123,7 +124,7 @@ nav {
 
 .content-box {
   width: 340px;
-  height: 300px;
+  height: 420px;
 }
 
 .content-img {
@@ -142,7 +143,7 @@ nav {
 
 .second-content-box {
   width: 340px;
-  height: 300px;
+  height: 420px;
 }
 
 .second-content-img {
@@ -152,3 +153,44 @@ nav {
   background-size: cover;
   background-position: 20% 40%;
 }
+/* contentのCSS 終了 */
+
+
+/* 選択とお知らせのCSS */
+
+.info-group {
+  display: flex;
+  justify-content: space-around;
+  border:solid;
+  border-color: blue;
+
+}
+
+select {
+  border-radius: 0;
+  border-color: lightblue;
+  width: 140px;
+  height:50px;
+  display: inline-block;
+  cursor: pointer;
+  padding: 10px;
+  background-color: #ffffff;
+  color:#000000;
+}
+
+.info-list-btn {
+  background-color: yellow;
+}
+
+.btn-text {
+    font-size: 14px;
+    text-decoration: none;
+    display: table-cell;
+    vertical-align: middle;
+    cursor: pointer;
+    line-height: 20px;
+    padding: 14px 10px;
+    background-color: yellow;
+
+}
+
