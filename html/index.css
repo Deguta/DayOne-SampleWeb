@@ -1,16 +1,25 @@
 body {
-  border:solid;
-  border-color: red;
   width: 100%;
-  height:100vh;
+  height:auto;
+  background: #f5f5f5;
+}
+/* Header */
+header {
+  height: 720px;
+  border:solid;
+  border-color: blue;
+  background-color: lightblue;
+
+  
 }
 
-header {
+nav {
   border:solid;
-  border-color: rgb(66, 47, 47);
+  border-color: red;
   height: 80px;
   display: flex;
-  justify-content: left;
+  position: fixed;
+  width: 100%;
 
 }
 
@@ -42,30 +51,104 @@ header {
   text-decoration: none;
 }
 
-
-
-
-
-
-
-
-
-
-/* .right-box {
+/* Header right */
+.right-box {
   border:solid;
   border-color:purple;
-  display: flex;
-  justify-content: flex-start;
-  
+  margin-left: auto;
+  margin-right:20px;
 
 }
 .guide-right {
+  display:flex;
   
+
+
 }
 
 .right-menu {
   list-style: none;
   border:solid;
   border-color:green;
+  line-height:40px;
+  margin-right:20px;
+}
 
-} */
+.right-menu a {
+  text-decoration: none;
+}
+
+.wrapper {
+
+}
+/* HeaderのCSS終了 */
+
+
+
+.wrapper-1 {
+  height: 200px;
+  border:solid;
+  border-color: lightblue;
+
+}
+
+/* informationのCSS */
+
+.information-box {
+  text-align:center;
+  border:solid;
+  border-color: green;
+}
+
+.information {
+  border:solid;
+  border-color: red;
+  font-size: 44px;
+  color: #754194;
+}
+
+.information-ja {
+  font-size: 14px;
+  border:solid;
+  border-color: blue;
+}
+/* informationのCSS 終了 */
+
+.content {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+  padding-bottom: 50px;
+}
+
+.content-box {
+  width: 340px;
+  height: 300px;
+}
+
+.content-img {
+  width: 100%;
+  height: 200px;
+  background: url('../img/cliff-5954980_640.jpg');
+  background-size: cover;
+  background-position: 20% 40%;
+}
+
+.second-content {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+
+.second-content-box {
+  width: 340px;
+  height: 300px;
+}
+
+.second-content-img {
+  width: 100%;
+  height: 200px;
+  background: url('../img/winter-5914653_640.jpg');
+  background-size: cover;
+  background-position: 20% 40%;
+}
