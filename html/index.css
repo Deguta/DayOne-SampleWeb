@@ -18,7 +18,6 @@ nav {
   border-color: red;
   height: 80px;
   display: flex;
-  position: fixed;
   width: 100%;
 
 }
@@ -160,37 +159,56 @@ nav {
 
 .info-group {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   border:solid;
   border-color: blue;
+  margin-bottom: 70px;
 
 }
 
 select {
+  display: block;
   border-radius: 0;
-  border-color: lightblue;
+  border-color: rgba(231, 225, 225, 0.986);
   width: 140px;
   height:50px;
-  display: inline-block;
   cursor: pointer;
   padding: 10px;
   background-color: #ffffff;
-  color:#000000;
+  color: rgba(231, 225, 225, 0.986);
+  margin-right: 40px;
+
+}
+#select-location {
+  color: rgba(231, 225, 225, 0.986);
+
+
 }
 
 .info-list-btn {
-  background-color: yellow;
+  background-color: rgb(247, 201, 0);
+  cursor: pointer;
 }
 
-.btn-text {
-    font-size: 14px;
-    text-decoration: none;
-    display: table-cell;
-    vertical-align: middle;
-    cursor: pointer;
-    line-height: 20px;
-    padding: 14px 10px;
-    background-color: yellow;
+#btn-text {
+  width: 170px;
+  height: 48px;
+  font-size: 14px;
+  text-decoration: none;
+  display: table-cell;
+  vertical-align: middle;
+  cursor: pointer;
+  line-height: 20px;
+  padding: 14px 10px;
+  background-color: rgb(247, 201, 0);
+  color: #ffffff;
+  font-weight: bold;
+  border: none;
 
 }
 
+/* 選択とお知らせのCSS 終了 */
+
+.more-info {
+  height: 788px;
+}
