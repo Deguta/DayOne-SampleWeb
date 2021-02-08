@@ -211,4 +211,38 @@ select {
 
 .more-info {
   height: 788px;
+  border:solid;
+  border-color: red;
+  width: 100%;
+  background: url('../img/4317917_m.jpg');
+  background-size: cover;
+  background-position: 100% 100%;
+  position: relative;
+  cursor: pointer;
+  text-align: center;
+  
+
+
+}
+
+.more-info-text {
+  height: 490px;
+  border:solid;
+  border-color: yellow;
+  position: absolute;
+  top: 0;
+	bottom: 0;
+  right: 0;
+  left: 0;
+	margin: auto;
+
+
+
+}
+
+.text-top {
+}
+
+.info-title {
+  
 }
