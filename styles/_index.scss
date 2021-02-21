@@ -385,6 +385,16 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
   }
 }
 
+@media screen and (max-width:824) {
+  .info__block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .info__item {
+    width: 90vw;
+  }
+}
 
 .infoSearch {
   text-align: center;
