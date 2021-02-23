@@ -339,7 +339,10 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   opacity: 0.7;
 }
 
-@media screen and (max-width: 824) {
+@media screen and (max-width: 824px) {
+  .info {
+    background-color: red;
+  }
   .info__block {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -351,8 +354,6 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-  }
-  .info__item {
     width: 90vw;
   }
 }

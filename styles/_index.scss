@@ -335,11 +335,13 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 }
 
 .info {
+
   width: 100%;
   &__block {
     margin: 0 40px;
     display: block;
     .info__item {
+
       @include info-item();
       .info-container {
         display: block;
@@ -385,14 +387,17 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
   }
 }
 
-@media screen and (max-width:824) {
-  .info__block {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .info__item {
-    width: 90vw;
+
+
+@media screen and (max-width: 824px) {
+  .info {
+    background-color: red;
+    &__block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 90vw;
+    }
   }
 }
 
