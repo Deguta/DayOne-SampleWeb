@@ -8,8 +8,6 @@
 
   <meta name="description" content="カプセルホテルでもなく、ビジネスホテルでもない、新しいスタイルのホテル「ファーストキャビン」。快適性と機能性を追求したキャビンをご用意しています。">
   <meta name="keywords" content="">
-  <!-- <link href="{{ asset('css/app.css') }}" rel="stylesheet"> -->
-  <!-- <link href="{{ asset('app.css') }}" rel="stylesheet"> -->
   <link rel="stylesheet" href="styles/app.css" />
   
   <meta name="csrf-param" content="authenticity_token">
@@ -20,557 +18,411 @@
 <body>
 
   <header>
-  <div class="header">
-    <div class="header-logo">
-      <a href="/" class="header-logo__link">
-        <img alt="FIRST CABIN" class="header-logo__link--img" src="images/firstcabin-logo1.png">
-      </a>
-    </div>
-    <div class="header-box">
-      <ul class="header-nav">
-        <!-- <li class="header-nav__logo">
-          <a href="/" class="header-nav__item--link">
-              <img alt="FIRST CABIN" class="header-nav__logoImg" src="aaaaaa/images/record.png">
-          </a>
-        </li> -->
-        <li class="header-nav__item">
-          <a href="/cabin/" class="header-nav__item--link">キャビン</a>
-        </li>
-        <li class="header-nav__item">
-          <a href="/concept/" class="header-nav__item--link">コンセプト</a>
-        </li>
-        <li class="header-nav__item">
-          <a href="/hotels/" class="header-nav__item--link">施設一覧</a>
-        </li>
-        <li class="header-nav__item">
-          <a href="/news/" class="header-nav__item--link">お知らせ</a>
-        </li>
-        <li class="header-nav__item">
-          <a href="/faq/" class="header-nav__item--link">よくある質問</a>
-        </li>
-        <li class="header-nav__item">
-          <a href="#" class="header-nav__item--link">空室検索</a>
-        </li>
-      </ul>
-      <div class="header-login">
-        <a class="header-login__link" data-remote="true" href="/users/sign_in">ログイン</a>
+    <div class="header">
+      <div class="header-logo">
+        <a href="/" class="header-logo__link">
+          <img alt="FIRST CABIN" class="header-logo__link--img" src="/images/firstcabin-logo1.png">
+        </a>
+        <button class="mobile-menu-icon" onclick="document.querySelector('.header').classList.toggle('menu-open');">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+      <!-- <button class="mobile-menu-icon" onclick="document.querySelector('.header').classList.toggle('menu-open');">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button> -->
+      <div class="header-box">
+        <ul class="header-nav">
+          <li class="header-nav__item">
+            <a href="/cabin/" class="header-nav__item--link">キャビン</a>
+          </li>
+          <li class="header-nav__item">
+            <a href="/concept/" class="header-nav__item--link">コンセプト</a>
+          </li>
+          <li class="header-nav__item">
+            <a href="/hotels/" class="header-nav__item--link">施設一覧</a>
+          </li>
+          <li class="header-nav__item">
+            <a href="/news/" class="header-nav__item--link">お知らせ</a>
+          </li>
+          <li class="header-nav__item">
+            <a href="/faq/" class="header-nav__item--link">よくある質問</a>
+          </li>
+          <li class="header-nav__item bottom">
+            <a href="#" class="header-nav__item--link menu-open">空室検索</a>
+          </li>
+        </ul>
+        <div class="header-login">
+          <a class="header-login__link" data-remote="true" href="/users/sign_in">ログイン</a>
+        </div>
+      </div>
+      <div class="header-lang">
+        <a href="#" class="header-lang__link">日本語</a>
       </div>
     </div>
-    <div class="header-lang">
-      <a href="#" class="header-lang__link">日本語</a>
+  
+  </header>
+  
+  
+  <main>
+  <section class="topMain">
+    <div class="topMain-Block">
+      <div class="topMain-item">
+        <div class="topMain-item">
+          <img alt="FIRST CABIN" id="img01" src="/images/main-pic1.jpg">
+          <img alt="FIRST CABIN" id="img02" src="/images/luxury1.jpg">
+          <img alt="FIRST CABIN" id="img03" src="/images/luxury2.jpg">
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <div class="search">
+    <!-- <div class="search__head">
+      空室検索
+    </div> -->
+    <div class="search__body">
+      <form id="formSearch" action="/plans" method="POST">
+        <div class="search__items">
+          <span class="search__area">
+            <input type="text" name="" class="icon-area" placeholder="宿泊エリアを選択" readonly="">
+            <input type="hidden" value="">
+          </span>
+          <span class="search__calender">
+            <input type="text" name="" class="input-search" readonly="">
+            <!-- <input type="hidden">
+            <input type="hidden"> -->
+          </span>
+          <span class="search__sex">
+            <input type="radio" name="gender" class="search__sex--input" id="search-sex-1" value="0">
+            <label class="radio" for="search-sex-1">
+              <span class="icon-man-white">男性</span>
+            </label>
+            <input type="radio" name="gender" class="search__sex--input" id="search-sex-2" value="1">
+            <label class="radio" for="search-sex-2">
+              <span class="icon-woman-white">女性</span>
+            </label>
+          </span>
+          <div class="mainBtn">
+            <div class="mainBtn__container">
+              <a href="#" class="mainBtn__container--text">空室検索</a>
+            </div>
+          </div>
+        </div>
+      </form>
+      
     </div>
   </div>
-
-</header>
-
-
-<main>
-<section class="topMain">
-  <div class="topMain-Block">
-    <div class="topMain-item">
-      <!-- <video class="mainMovie__video" poster="" loop="loop" muted="muted" preload="none" playsinline="" style="width: 320px;">
-        <source src="https://d2vvrahedad96d.cloudfront.net/uploads/page_content/mainv_mov_file/1/37f50972-aec3-4f67-b39e-f333cfdbd255.mp4" type="video/mp4;">
-        <p>ご使用の端末では再生できません。</p>
-      </video> -->
-      <a href="/" class="topMain-item">
-        <img alt="FIRST CABIN" class="topMain-item__img" src="images/main-pic1.jpg">
+  
+  
+  
+  <!-- .info-ttl -->
+  <div class="info-ttl">
+    <h2 class="info-ttl--main">INFORMATION</h2>
+    <p class="info-ttl--sub">お知らせ</p>
+  </div><!--/ .info-ttl -->
+  
+  <!-- .info -->
+  <section class="info">
+    <div class="info__block">
+      <div class="info__item">
+        <a href="#" class="info-container">
+          <div class="info__block--img1">
+          </div>
+          <div class="info__block--cts">
+            <h3 class="ttl">【愛宕山限定】＼4連泊の超お得プラン</h3>
+            <p class="date">2021.01.20</p>
+              <p class="location">ファーストキャビン愛宕山</p>
+          </div>
+        </a>
+      </div>
+  
+      <div class="info__item">
+        <a href="#" class="info-container">
+          <div class="info__block--img2">
+          </div>
+          <div class="info__block--cts">
+            <h3 class="ttl">【秋葉原 昭和通り】休業のお知らせ</h3>
+            <p class="date">2021.01.17</p>
+              <p class="location">ファーストキャビン秋葉原 昭和通り</p>
+          </div>
+        </a>
+      </div>
+  
+      <div class="info__item">
+      <a href="#" class="info-container">
+          <div class="info__block--img3">
+        </div>
+        <div class="info__block--cts">
+          <h3 class="ttl">保護者同意書ご提出のお願い</h3>
+          <p class="date">2020.01.08</p>
+            <p class="location">― 共通</p>
+        </div>
       </a>
+      </div>
+  
+      <div class="info__item">
+        <a href="#" class="info-container">
+          <div class="info__block--img4">
+          </div>
+          <div class="info__block--cts">
+            <h3 class="ttl">緊急事態宣言に伴うGo To トラベルの取扱いについて</h3>
+            <p class="date">2021.01.14</p>
+              <p class="location">― 共通</p>
+          </div>
+        </a>
+      </div>
+  
+      <div class="info__item">
+        <a href="#" class="info-container">
+          <div class="info__block--img5">
+          </div>
+          <div class="info__block--cts">
+            <h3 class="ttl">【ファーストキャビン東京ドームシティ】休館のお知らせ</h3>
+            <p class="date">2021.01.08</p>
+              <p class="location">― ファーストキャビン東京ドームシテ</p>
+          </div>
+        </a>
+      </div>
+  
+      <div class="info__item info__item-bottom">
+        <a href="#" class="info-container">
+          <div class="info__block--img6">
+          </div>
+          <div class="info__block--cts">
+            <h3 class="ttl">【愛宕山限定】1月＆2月のお得なプラン情報</h3>
+            <p class="date">2021.01.07</p>
+              <p class="location">― ファーストキャビン愛宕山</p>
+          </div>
+        </a>
+      </div>
     </div>
-  </div>
-</section>
-
-<div class="search">
-  <!-- <div class="search__head">
-    空室検索
-  </div> -->
-  <div class="search__body">
-    <form id="formSearch" action="/plans" method="POST">
-      <div class="search__items">
-        <span class="search__area">
-          <input type="text" name="" class="icon-area" placeholder="宿泊エリアを選択" readonly="">
-          <input type="hidden" value="">
-        </span>
-        <span class="search__calender">
-          <input type="text" name="" class="input-search" readonly="">
-          <!-- <input type="hidden">
-          <input type="hidden"> -->
-        </span>
-        <span class="search__sex">
-          <input type="radio" name="gender" class="search__sex--input" id="search-sex-1" value="0">
-          <label class="radio" for="search-sex-1">
-            <span class="icon-man-white">男性</span>
-          </label>
-          <input type="radio" name="gender" class="search__sex--input" id="search-sex-2" value="1">
-          <label class="radio" for="search-sex-2">
-            <span class="icon-woman-white">女性</span>
-          </label>
-        </span>
+  
+    <form action="/news/" method="GET">
+      <div class="infoSearch">
+        <div class="infoSearchSelect">
+          <span class="select2">
+            <select name="post_search_form[hotel_id]" data-jsformname="infoSearch" id="infoSearch">
+              <option class="select-def" value="" selected="">全ての施設</option>
+              <option value="13">【ファーストキャビン公式】ファーストキャビン愛宕山</option><option value="34">ファーストキャビン東京ドームシティ【2021年1月11日～当面の間休館】</option><option value="10">【コロナ休業中】ファーストキャビン秋葉原 昭和通り</option><option value="33">ファーストキャビンTKP市ヶ谷</option><option value="11">ファーストキャビン日本橋よこやま町（休業中）</option><option value="32">ファーストキャビン日本橋水天宮（休業中）</option><option value="14">【営業中】ファーストキャビン赤坂</option><option value="15">ファーストキャビン羽田ターミナル1 （休業中）</option><option value="36">ファーストキャビン京都二条城（休業中）</option><option value="17">ファーストキャビン京都烏丸 【 for ｗomen】（休業中）</option><option value="22">ファーストキャビン阪神西梅田（大阪）（休業中）</option><option value="18">ファーストキャビン御堂筋難波（休業中）</option><option value="9">ファーストキャビン関西空港（休業中）</option><option value="19">ファーストキャビン博多</option><option value="20">ファーストキャビン長崎</option>
+            </select>
+          </span>
+        </div>
         <div class="mainBtn">
           <div class="mainBtn__container">
-            <a href="#" class="mainBtn__container--text">空室検索</a>
+            <a href="#" class="mainBtn__container--text">お知らせ一覧へ</a>
           </div>
         </div>
       </div>
     </form>
     
-  </div>
-</div>
-
-<section class="topMain-sub" >
-    <div class="topMain-sub__block">
-        <a href="#">
-          <img src="images/goto-travel2.jpg" class="topMain-sub__block--img" alt="Go Toトラベル事業の一時停止適用除外について">
-        </a>
-    </div>
-</section>
-
-<!-- .info-ttl -->
-<div class="info-ttl">
-  <h2 class="info-ttl--main">INFORMATION</h2>
-  <p class="info-ttl--sub">お知らせ</p>
-</div><!--/ .info-ttl -->
-
-<!-- .info -->
-<section class="info">
-  <div class="info__block">
-    <div class="info__item">
-      <a href="#" class="info-container">
-        <div class="info__block--img1">
-          <!-- <div class="inner" style="background: url(&quot;https://d2vvrahedad96d.cloudfront.net/images/a4f37fd3-e4cc-43cd-9b85-02d3e731e32a.jpg&quot;) center center / cover no-repeat;"></div> -->
-        </div>
-        <div class="info__block--cts">
-          <h3 class="ttl">【愛宕山限定】＼4連泊の超お得プラン</h3>
-          <p class="date">2021.01.20</p>
-            <p class="location">ファーストキャビン愛宕山</p>
-        </div>
-      </a>
-    </div>
-
-    <div class="info__item">
-      <a href="#" class="info-container">
-        <div class="info__block--img2">
-          <!-- <div class="inner" style="background: url(&quot;https://d2vvrahedad96d.cloudfront.net/images/24c03b29-1297-4bb4-ab0b-721da36eb483.jpg&quot;) center center / cover no-repeat;"></div> -->
-        </div>
-        <div class="info__block--cts">
-          <h3 class="ttl">【秋葉原 昭和通り】休業のお知らせ</h3>
-          <p class="date">2021.01.17</p>
-            <p class="location">ファーストキャビン秋葉原 昭和通り</p>
-        </div>
-      </a>
-    </div>
-
-    <div class="info__item">
-    <a href="#" class="info-container">
-        <div class="info__block--img3">
-        <!-- <div class="inner" style="background: url(&quot;https://d2vvrahedad96d.cloudfront.net/images/a00babe4-94ef-436d-a276-2031164197f3.jpg&quot;) center center / cover no-repeat;"></div> -->
-      </div>
-      <div class="info__block--cts">
-        <h3 class="ttl">保護者同意書ご提出のお願い</h3>
-        <p class="date">2020.01.08</p>
-          <p class="location">― 共通</p>
-      </div>
-    </a>
-    </div>
-
-    <div class="info__item">
-      <a href="#" class="info-container">
-        <div class="info__block--img4">
-          <!-- <div class="inner" style="background: url(&quot;https://d2vvrahedad96d.cloudfront.net/images/209eda6c-0b8d-42f5-879f-3c14e5b358e6.jpg&quot;) center center / cover no-repeat;"></div> -->
-        </div>
-        <div class="info__block--cts">
-          <h3 class="ttl">緊急事態宣言に伴うGo To トラベルの取扱いについて</h3>
-          <p class="date">2021.01.14</p>
-            <p class="location">― 共通</p>
-        </div>
-      </a>
-    </div>
-
-    <div class="info__item">
-      <a href="#" class="info-container">
-        <div class="info__block--img5">
-          <!-- <div class="inner" style="background: url(&quot;https://d2vvrahedad96d.cloudfront.net/images/6b4034e7-2d9d-4ab8-a857-a768ca39829f.jpg&quot;) center center / cover no-repeat;"></div> -->
-        </div>
-        <div class="info__block--cts">
-          <h3 class="ttl">【ファーストキャビン東京ドームシティ】休館のお知らせ</h3>
-          <p class="date">2021.01.08</p>
-            <p class="location">― ファーストキャビン東京ドームシテ</p>
-        </div>
-      </a>
-    </div>
-
-    <div class="info__item">
-      <a href="#" class="info-container">
-        <div class="info__block--img6">
-          <!-- <div class="inner" style="background: url(&quot;https://d2vvrahedad96d.cloudfront.net/images/5d90b2f9-3d7c-4f59-aaa4-29ef0d932734.jpg&quot;) center center / cover no-repeat;"></div> -->
-        </div>
-        <div class="info__block--cts">
-          <h3 class="ttl">【愛宕山限定】1月＆2月のお得なプラン情報</h3>
-          <p class="date">2021.01.07</p>
-            <p class="location">― ファーストキャビン愛宕山</p>
-        </div>
-      </a>
-    </div>
-  </div>
-
-  <form action="/news/" method="GET">
-    <div class="infoSearch">
-      <div class="infoSearchSelect">
-        <span class="select2">
-          <!-- <span class="select2--label">全ての施設</span> -->
-          <select name="post_search_form[hotel_id]" data-jsformname="infoSearch" id="infoSearch">
-            <option class="select-def" value="" selected="">全ての施設</option>
-            <option value="13">【ファーストキャビン公式】ファーストキャビン愛宕山</option><option value="34">ファーストキャビン東京ドームシティ【2021年1月11日～当面の間休館】</option><option value="10">【コロナ休業中】ファーストキャビン秋葉原 昭和通り</option><option value="33">ファーストキャビンTKP市ヶ谷</option><option value="11">ファーストキャビン日本橋よこやま町（休業中）</option><option value="32">ファーストキャビン日本橋水天宮（休業中）</option><option value="14">【営業中】ファーストキャビン赤坂</option><option value="15">ファーストキャビン羽田ターミナル1 （休業中）</option><option value="36">ファーストキャビン京都二条城（休業中）</option><option value="17">ファーストキャビン京都烏丸 【 for ｗomen】（休業中）</option><option value="22">ファーストキャビン阪神西梅田（大阪）（休業中）</option><option value="18">ファーストキャビン御堂筋難波（休業中）</option><option value="9">ファーストキャビン関西空港（休業中）</option><option value="19">ファーストキャビン博多</option><option value="20">ファーストキャビン長崎</option>
-          </select>
-        </span>
-      </div>
-      <!-- <div class="infoSearchBtn">
-        <div class="Info-btn">
-          <span class="btn--text"><button type="submit">お知らせ一覧へ</button></span>
-        </div>
-      </div> -->
-      <div class="mainBtn">
-        <div class="mainBtn__container">
-          <a href="#" class="mainBtn__container--text">お知らせ一覧へ</a>
-        </div>
-      </div>
-    </div>
-  </form>
+  </section>
   
-</section>
-
-<section class="compactLuxury">
-  <a href="#"> 
-    <div class="compactLuxury-img"></div>
-    <div class="compactLuxury__block">
-      <div class="compactLuxury__inner">
-        <div class="compactLuxury__inner--star">
-          <span class="starIcon">⭐︎</span>
-          <span class="starIcon"></span>
-          <span class="starIcon"></span>
-          <span class="starIcon"></span>
-          <span class="starIcon"></span>
-        </div>
-        <h2 class="compactLuxury__ttl">
-          <span class="word">
-            COMPACT & LUXURY
-            <!-- <span class="char" style="transition-delay: 1s;">C</span>
-            <span class="char" style="transition-delay: 1s;">O</span>
-            <span class="char" style="transition-delay: 1.75s;">M</span>
-            <span class="char" style="transition-delay: 1.5s;">P</span>
-            <span class="char" style="transition-delay: 1.5s;">A</span>
-            <span class="char" style="transition-delay: 1s;">C</span>
-            <span class="char" style="transition-delay: 1.5s;">T</span> -->
-          </span>
-          <!-- <span class="word">
-            <span class="char" style="transition-delay: 0.75s;">&amp;</span>
-          </span>
-          <span class="word">
-            <span class="char" style="transition-delay: 1.25s;">L</span>
-            <span class="char" style="transition-delay: 1.25s;">U</span>
-            <span class="char" style="transition-delay: 1s;">X</span>
-            <span class="char" style="transition-delay: 0.75s;">U</span>
-            <span class="char" style="transition-delay: 1.5s;">R</span>
-            <span class="char" style="transition-delay: 0.75s;">Y</span>
-          </span> -->
-        </h2>
-        <div class="compactLuxury__text">
-          <p>ファーストキャビンは、飛行機のファーストクラスをイメージした新しいコンパクトホテルです。<br>コンパクトな高級空間には安心で快適な機能が揃っており、<br class="hc-sp-hide">今までにない新しい未来型ホテルとして皆様にご提供いたします。</p>
-          <!-- <div class="compactLuxury__more">
-            <div class="compactLuxury__more__btn">
-              <span class="btn--text">もっと見る</span>
-            </div>
-          </div> -->
-        </div>
-        <div class="compactLuxury-btn">
-          <div class="mainBtn">
-            <div class="mainBtn__container">
-              <a href="#" class="mainBtn__container--text">もっと見る</a>
+  <section class="compactLuxury">
+    <a href="#"> 
+      <div class="compactLuxury-img"></div>
+      <div class="compactLuxury__block">
+        <div class="compactLuxury__inner">
+          <div class="compactLuxury__inner--star">
+            <span class="star1a">★</span>
+            <span class="star2a">★</span>
+            <span class="star3a">★</span>
+            <span class="star4a">★</span>
+            <span class="star5a">★</span>
+          </div>
+          <h2 class="compactLuxury__ttl">
+            <span class="word">
+              COMPACT & LUXURY
+            </span>
+          </h2>
+          <div class="compactLuxury__text">
+            <p>ファーストキャビンは、飛行機のファーストクラスをイメージした新しいコンパクトホテルです。<br>コンパクトな高級空間には安心で快適な機能が揃っており、<br class="hc-sp-hide">今までにない新しい未来型ホテルとして皆様にご提供いたします。</p>
+          </div>
+          <div class="compactLuxury-btn">
+            <div class="mainBtn">
+              <div class="mainBtn__container">
+                <a href="#" class="mainBtn__container--text">もっと見る</a>
+              </div>
             </div>
           </div>
-        </div>
-
-        <!-- <div class="cctVisualMain__star">
-          <span class="starIcon"></span>
-          <span class="starIcon"></span>
-          <span class="starIcon"></span>
-          <span class="starIcon"></span>
-          <span class="starIcon"></span>
-        </div> -->
-      </div>
-    </div>
-  </a>
-</section>
-
-<div class="info-ttl">
-  <h2 class="info-ttl--main">ABOUT CABIN</h2>
-  <p class="info-ttl--sub">キャビンについて</p>
-</div>
-
-<section class="aboutCabin">
-  <div class="aboutCabin__item1">
-    <a href="#" class="aboutCabin__container">
-      <!-- <div class="aboutCabin__bk" style="background-image: url(/assets/images/top/top_about_firstBk.jpg);"></div> -->
-      <div class="aboutCabin__block">
-        <div class="aboutCabin__inner">
-          <h3 class="aboutCabin__ttl">
-            First Class Cabin
-          </h3>
-          <span class="aboutCabin__ttlSub">ファーストクラスキャビン</span>
-          <p class="aboutCabin__item--txt">ラグジュアリーな空間に包み込まれた快適なひととき<br class="hc-sp-hide">地上のファーストクラスをご体験ください</p>
-          <div class="aboutCabin__item--btn">
-            <div class="mainBtn__container">
-              <span class="mainBtn__container--text">もっと見る</span>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </a>
-  </div>+…
-
-  <div class="aboutCabin__item2">
-    <a href="#" class="aboutCabin__container">
-      <!-- <div class="aboutCabin__bk" style="background-image: url(/assets/images/top/top_about_businessBk.jpg);"></div> -->
-      <div class="aboutCabin__block">
-        <div class="aboutCabin__inner">
-          <h3 class="aboutCabin__ttl">
-            Business Class Cabin
-          </h3>
-          <span class="aboutCabin__ttlSub">ビジネスクラスキャビン</span>
-          <p class="aboutCabin__item--txt">快適な滞在に必要な空間と設備をコンパクトに凝縮<br class="hc-sp-hide">包み込まれる感覚でつかの間の休息を</p>
-          <div class="aboutCabin__item--btn">
-            <div class="mainBtn__container">
-              <span class="mainBtn__container--text">もっと見る</span>
-            </div>
+  
+          <div class="compactLuxury__inner--star">
+            <span class="star1b">★</span>
+            <span class="star2b">★</span>
+            <span class="star3b">★</span>
+            <span class="star4b">★</span>
+            <span class="star5b">★</span>
           </div>
         </div>
       </div>
     </a>
+  </section>
+  
+  <div class="info-ttl">
+    <h2 class="info-ttl--main">ABOUT CABIN</h2>
+    <p class="info-ttl--sub">キャビンについて</p>
   </div>
-
-  <div class="aboutCabin__item3">
-    <a href="#" class="aboutCabin__container">
-      <!-- <div class="aboutCabin__bk" style="background-image: url(/assets/images/top/top_about_economyBk.jpg);"></div> -->
-      <div class="aboutCabin__block">
-        <div class="aboutCabin__inner">
-          <h3 class="aboutCabin__ttl">
-            Premium Economy Class Cabin
-          </h3>
-          <span class="aboutCabin__ttlSub">プレミアムエコノミークラスキャビン</span>
-          <!-- <p class="aboutCabin__item--txt">より一層リーズナブルに、<br class="hc-sp-hide">コンパクトな快適空間を追求しました</p>
-          <div class="aboutCabin__item--btn">
-            <span class="btn--text">もっと見る</span>
-          </div> -->
+  
+  <section class="aboutCabin">
+    <div class="aboutCabin__item aboutCabin-img1">
+      <div class="aboutCabinPic1"></div>
+      <a href="#" class="aboutCabin__container">
+        <div class="aboutCabin__block">
+          <div class="aboutCabin__inner">
+            <h3 class="aboutCabin__ttl">
+              First Class Cabin
+            </h3>
+            <span class="aboutCabin__ttlSub">ファーストクラスキャビン</span>
+            <p class="aboutCabin__item--txt">ラグジュアリーな空間に包み込まれた快適なひととき<br class="hc-sp-hide">地上のファーストクラスをご体験ください</p>
+            <div class="aboutCabin__item--btn">
+              <div class="mainBtn__container">
+                <span class="mainBtn__container--text">もっと見る</span>
+              </div>
+            </div>
+  
+          </div>
         </div>
+      </a>
+    </div>
+  
+    <div class="aboutCabin__item aboutCabin-img2">
+      <div class="aboutCabinPic2"></div>
+      <a href="#" class="aboutCabin__container">
+        <div class="aboutCabin__block">
+          <div class="aboutCabin__inner">
+            <h3 class="aboutCabin__ttl">
+              Business Class Cabin
+            </h3>
+            <span class="aboutCabin__ttlSub">ビジネスクラスキャビン</span>
+            <p class="aboutCabin__item--txt">快適な滞在に必要な空間と設備をコンパクトに凝縮<br class="hc-sp-hide">包み込まれる感覚でつかの間の休息を</p>
+            <div class="aboutCabin__item--btn">
+              <div class="mainBtn__container">
+                <span class="mainBtn__container--text">もっと見る</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+  
+    <div class="aboutCabin__item aboutCabin-img3">
+      <div class="aboutCabinPic3"></div>
+      <a href="#" class="aboutCabin__container">
+        <div class="aboutCabin__block">
+          <div class="aboutCabin__inner">
+            <h3 class="aboutCabin__ttl">
+              Premium Economy Class Cabin
+            </h3>
+            <span class="aboutCabin__ttlSub">プレミアムエコノミークラスキャビン</span>
+            <p class="aboutCabin__item--txt">より一層リーズナブルに、<br class="hc-sp-hide">コンパクトな快適空間を追求しました</p>
+            <div class="aboutCabin__item--btn">
+              <!-- <span class="btn--text">もっと見る</span> -->
+              <div class="mainBtn__container">
+                <span class="mainBtn__container--text">もっと見る</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+  
+    <div class="aboutCabin__item aboutCabin-img4">
+      <div class="aboutCabinPic4"></div>
+      <a href="#" class="aboutCabin__container">
+        <div class="aboutCabin__block">
+          <div class="aboutCabin__inner">
+            <h3 class="aboutCabin__ttl">
+              Premium Class
+            </h3>
+            <span class="aboutCabin__ttlSub">プレミアムクラス</span>
+            <p class="aboutCabin__item--txt">施錠も可能な個室タイプのプレミアムクラスは<br class="hc-sp-hide">お⼀⼈でもグループでもご利⽤いただけます。</p>
+            <div class="aboutCabin__item--btn">
+              <!-- <span class="btn--text">もっと見る</span> -->
+              <div class="mainBtn__container">
+                <span class="mainBtn__container--text">もっと見る</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+  </section>
+  
+  <div class="facilityAll">
+    <div class="mainBtn">
+      <div class="mainBtn__container">
+        <a href="#" class="mainBtn__container--text">施設一覧へ</a>
       </div>
-    </a>
-  </div>
-
-  <div class="aboutCabin__item4">
-    <a href="#" class="aboutCabin__container">
-      <!-- <div class="aboutCabin__bk" style="background-image: url(/assets/images/top/top_about_premiumBk.jpg);"></div> -->
-      <div class="aboutCabin__block">
-        <div class="aboutCabin__inner">
-          <h3 class="aboutCabin__ttl">
-            Premium Class
-          </h3>
-          <span class="aboutCabin__ttlSub">プレミアムクラス</span>
-          <!-- <p class="aboutCabin__item--txt">施錠も可能な個室タイプのプレミアムクラスは<br class="hc-sp-hide">お⼀⼈でもグループでもご利⽤いただけます。</p>
-          <div class="aboutCabin__item--btn">
-            <span class="btn--text">もっと見る</span>
-          </div> -->
-        </div>
-      </div>
-    </a>
-  </div>
-</section>
-
-<div class="info-ttl">
-  <h2 class="info-ttl--main">LOCATION</h2>
-  <p class="info-ttl--sub">全国のファーストキャビン</p>
-</div>
-
-
-<section class="localList">
-  <div class="ll-container">
-    <div class="ll-container__item1">
-      <a href="#" class="ll-container__item">
-        <!-- <div class="ll-container__bk" style="background: url(&quot;https://d2vvrahedad96d.cloudfront.net/images/e00368ee-5cf7-4f2a-8db5-2e3aa1c1ded4.jpg&quot;) center center / cover no-repeat;"></div> -->
-        <div class="ll-container__block">
-          <div class="ll-container__inner">
-            <p class="ll-container__item--area">NAGASAKI</p>
-            <h3 class="ll-container__item--ttl">
-              <span class="icon-r_white">ファーストキャビン長崎</span>
-            </h3>
-            <p class="ll-container__item--addr icon-point_s">長崎県長崎市銅座町10-9※エントランスエレベーター前に階段（7段）がございます。</p>
-          </div>
-        </div>
-      </a>
-    </div>
-    <div class="ll-container__item2">
-      <a href="#" class="ll-container__item">
-        <!-- <div class="ll-container__bk" style="background: url(&quot;https://d2vvrahedad96d.cloudfront.net/images/34dd8ede-a1b2-490b-967e-fe4a4fb170fe.jpg&quot;) center center / cover no-repeat;"></div> -->
-        <div class="ll-container__block">
-          <div class="ll-container__inner">
-            <p class="ll-container__item--area">TOKYO</p>
-            <h3 class="ll-container__item--ttl">
-              <span class="icon-r_white">ファーストキャビンTKP市ヶ谷</span>
-            </h3>
-            <p class="ll-container__item--addr icon-point_s">東京都新宿区市谷八幡町 8 番地 TKP 市ヶ谷ビル</p>
-          </div>
-        </div>
-      </a>
-    </div>
-    <div class="ll-container__item3">
-      <a href="#" class="ll-container__item">
-        <!-- <div class="ll-container__bk" style="background: url(&quot;https://d2vvrahedad96d.cloudfront.net/images/ccaea7e1-8af2-4bb1-aa2a-65ebfc8c2024.jpg&quot;) center center / cover no-repeat;"></div> -->
-        <div class="ll-container__block">
-          <div class="ll-container__inner">
-            <p class="ll-container__item--area">TOKYO</p>
-            <h3 class="ll-container__item--ttl">
-              <span class="icon-r_white">【営業中】ファーストキャビン赤坂</span>
-            </h3>
-            <p class="ll-container__item--addr icon-point_s">東京都港区赤坂3丁目13−7</p>
-          </div>
-        </div>
-      </a>
-    </div>
-    <div class="ll-container__item4">
-      <a href="#" class="ll-container__item">
-        <!-- <div class="ll-container__bk" style="background: url(&quot;https://d2vvrahedad96d.cloudfront.net/images/0bc1758c-ceb8-43f4-9c92-020d9c2bba4b.jpg&quot;) center center / cover no-repeat;"></div> -->
-        <div class="ll-container__block">
-          <div class="ll-container__inner">
-            <p class="ll-container__item--area">KYOTO</p>
-            <h3 class="ll-container__item--ttl">
-              <span class="icon-r_white">ファーストキャビン京都烏丸 【 for ｗomen】（休業中）</span>
-            </h3>
-            <p class="ll-container__item--addr icon-point_s">京都府京都市下京区仏光寺通烏丸東入上柳町331番地　 タカノハスクエア　4F</p>
-          </div>
-        </div>
-      </a>
-    </div>
-    <div class="ll-container__item5">
-      <a href="#" class="ll-container__item">  
-        <!-- <div class="ll-container__bk" style="background: url(&quot;https://d2vvrahedad96d.cloudfront.net/images/9298a5b7-3740-42c6-9ea2-5455bca47095.jpg&quot;) center center / cover no-repeat;"></div> -->
-        <div class="ll-container__block">
-          <div class="ll-container__inner">
-            <p class="ll-container__item--area">OSAKA</p>
-            <h3 class="ll-container__item--ttl">
-              <span class="icon-r_white">ファーストキャビン阪神西梅田（大阪）（休業中）</span>
-            </h3>
-            <p class="ll-container__item--addr icon-point_s">大阪府大阪市福島区福島5丁目2番30号</p>
-          </div>
-        </div>
-      </a>
     </div>
   </div>
-  <div class="mainBtn">
-    <div class="mainBtn__container">
-      <a href="#" class="mainBtn__container--text">施設一覧へ</a>
-    </div>
-  </div>
-</section>
-
-
-<!-- <div class="remodal-bg">
-    <a href="#modal">モーダルを開く</a>
-</div>
-<div class="remodal" data-remodal-id="modal">
-    <button data-remodal-action="close" class="remodal-close"></button>
-    <h1>モーダルのタイトル</h1>
-    <p>モーダルの本文</p>
-    <br>
-    <button data-remodal-action="cancel" class="remodal-cancel">Cancelボタン</button>
-    <button data-remodal-action="confirm" class="remodal-confirm">OKボタン</button>
-</div> -->
-
-
+  
+    
   </main>
-
-
-  <footer>
-	<!-- .container -->
-	<!-- <section class="container">
-		<div class="scrollTop">
-      <a href="#" class="scrollTop__anchor">
-        <img src="aaa/images/record.png" alt="">
-      </a>
-		</div>
-	</section> -->
-	<!-- //.container -->
-
-	<!-- .container -->
-	<section class="footer">
-		<h3 class="footer__logo">
-      <img src="images/firstcabin-logo1.png" alt="first cabin" class="footer__logo--image">
-		</h3>
-
-		<div class="footer__box">
-			<div class="footer__cont">
-				<ul class="footer__cont--list">
-					<li class="footer__cont--item">
-						<a href="/corporate/" class="footer__cont--link">企業情報</a>
-					</li>
-				</ul>
-				<ul class="footer__cont--list">
-					<li class="footer__cont--item">
-						<a href="/rules/" class="footer__cont--link">宿泊約款・規約</a>
-					</li>
-					<li class="footer__cont--item">
-						<a href="/regulations/" class="footer__cont--link">予約システム利用規約</a>
-					</li>
-					<li class="footer__cont--item">
-						<a href="/privacy/" class="footer__cont--link">プライバシーポリシー</a>
-					</li>
-					<li class="footer__cont--item">
-						<a href="#" class="footer__cont--link" target="_blank">保護者同意書</a>
-					</li>
-				</ul>
-				<ul class="footer__cont--list">
-					<li class="footer__cont--item">お問い合わせ</li>
-					<li class="footer__cont--item">
-						<a href="/contact/" class="footer__cont--link footer__cont--linkSub">ご利用に関するお問い合わせ</a>
-					</li>
-					<li class="footer__cont--item">
-						<a href="/corporate/contact/" class="footer__cont--link footer__cont--linkSub">企業に関するお問い合わせ</a>
-					</li>
-				</ul>
-			</div>
-		
-			<div class="footer-sns">
-				<ul class="footer-sns__list">
-					<li class="footer-sns__list--word">FOLLOW US : </li>
-					<li class="footer-sns__list--item">
-						<a href="http://www.facebook.com/pages/%E3%83%95%E3%82%A1%E3%83%BC%E3%82%B9%E3%83%88%E3%82%AD%E3%83%A3%E3%83%93%E3%83%B3-FIRST-CABIN/147202925356501" target="_blank" class="footer-sns--link">
-							<!-- <img src="aaa/images/record.png" alt="Facebook" class="footer-sns--image"> -->
-						</a>
-						<a href="https://twitter.com/firstcabininc" target="_blank" class="footer-sns--link">
-							<!-- <img src="aaa/images/record.png" alt="Twitter" class="footer-sns--image"> -->
-						</a>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</section>
-	<!-- //.container -->
-	<p class="footer__copy">COPYRIGHT© 2020 FIRST CABIN INC. ALL RIGHTS RESERVED.</p>
-</footer>
-
-
-
   
-  <!-- <script src="/assets/front-2c3a88cc1b990ddca0c33364b6cfaa67c03ddeb9030b88e42582e7285600a46b.js"></script> -->
-  <!-- <script src="{{ asset('js/app.js') }}" defer></script> -->
-  <!-- <script src="scripts/app.js"></script> -->
+  
+    <footer>
+    <section class="footer">
+      <h3 class="footer__logo">
+        <img src="images/firstcabin-logo1.png" alt="first cabin" class="footer__logo--image">
+      </h3>
+  
+      <div class="footer__box">
+        <div class="footer__cont">
+          <ul class="footer__cont--list">
+            <li class="footer__cont--item">
+              <a href="/corporate/" class="footer__cont--link">企業情報</a>
+            </li>
+          </ul>
+          <ul class="footer__cont--list">
+            <li class="footer__cont--item">
+              <a href="/rules/" class="footer__cont--link">宿泊約款・規約</a>
+            </li>
+            <li class="footer__cont--item">
+              <a href="/regulations/" class="footer__cont--link">予約システム利用規約</a>
+            </li>
+            <li class="footer__cont--item">
+              <a href="/privacy/" class="footer__cont--link">プライバシーポリシー</a>
+            </li>
+            <li class="footer__cont--item">
+              <a href="#" class="footer__cont--link" target="_blank">保護者同意書</a>
+            </li>
+          </ul>
+          <ul class="footer__cont--list">
+            <li class="footer__cont--item">お問い合わせ</li>
+            <li class="footer__cont--item">
+              <a href="/contact/" class="footer__cont--link footer__cont--linkSub">ご利用に関するお問い合わせ</a>
+            </li>
+            <li class="footer__cont--item">
+              <a href="/corporate/contact/" class="footer__cont--link footer__cont--linkSub">企業に関するお問い合わせ</a>
+            </li>
+          </ul>
+        </div>
+      
+        <div class="footer-sns">
+          <ul class="footer-sns__list">
+            <li class="footer-sns__list--word">FOLLOW US : </li>
+            <li class="footer-sns__list--item">
+              <a href="http://www.facebook.com/pages/%E3%83%95%E3%82%A1%E3%83%BC%E3%82%B9%E3%83%88%E3%82%AD%E3%83%A3%E3%83%93%E3%83%B3-FIRST-CABIN/147202925356501" target="_blank" class="footer-sns--link">
+                <img src="/images/record.png" alt="Facebook" class="footer-sns--image">
+              </a>
+              <a href="https://twitter.com/firstcabininc" target="_blank" class="footer-sns--link">
+                <img src="/images/record.png" alt="Twitter" class="footer-sns--image">
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <p class="footer__copy">COPYRIGHT© 2020 FIRST CABIN INC. ALL RIGHTS RESERVED.</p>
+  </footer>
+
   <script src="scripts/header.js"></script>
   <script src="scripts/aboutcabin.js"></script>
   <script src="scripts/compactLuxury.js"></script>
   <script src="scripts/search.js"></script>
-  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script> -->
-  
-  <!-- <section id="js-modal-login" data-remodal-id="js-modal-login" class="js-modal js-modal-login"></section> -->
-  <!-- <div style="display: none;"> -->
   </div>
 
 </body>

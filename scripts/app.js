@@ -1,5 +1,5 @@
 // require('./bootstrap');
+require('./compactLuxury');
+require('./aboutcabin');
 require('./header');
 require('./search');
-require('./aboutcabin');
-// require('./compactLuxury');

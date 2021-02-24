@@ -1,6 +1,6 @@
-const search = document.querySelector('.search');
-const footer = document.querySelector('.footer');
-const cbSearch = function(entries, observer) {
+search = document.querySelector('.search');
+footer = document.querySelector('.footer');
+searchcb = function(entries, observer) {
   entries.forEach(entry =>  {
     if(entry.isIntersecting) {
       //  console.log('inview');
@@ -18,5 +18,5 @@ options = {
   // rootMargin: "0px 0px 0px 0px",
 
 };
-io = new IntersectionObserver(cbSearch, options);
+io = new IntersectionObserver(searchcb, options);
 io.observe(footer);

@@ -1,7 +1,13 @@
-const header = document.querySelector('.header');
-// const item = document.querySelector('.project__items');
-const topMain = document.querySelector('.topMain');
-const cbHeader = function(entries, observer) {
+// document.addEventListener('DOMContentLoaded', function(){
+
+//   console.log("test");
+//   header = document.querySelector('.header');
+
+// })
+
+header = document.querySelector('.header');
+let topp = document.querySelector('.topMain');
+headercb = function(entries, observer) {
   entries.forEach(entry =>  {
     if(entry.isIntersecting) {
       //  console.log('inview');
@@ -19,6 +25,6 @@ options = {
   rootMargin: "-99% 0px 0px 0px",
 
 };
-io = new IntersectionObserver(cbHeader, options);
-io.observe(topMain);
+io = new IntersectionObserver(headercb, options);
+io.observe(topp);
 
