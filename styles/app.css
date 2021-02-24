@@ -637,7 +637,7 @@ main {
   width: 1500px;
   height: 100%;
   position: absolute;
-  background-image: url("/images/luxury2.jpg");
+  background-image: url("../images/luxury2.jpg");
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -928,28 +928,28 @@ main {
   background-size: cover;
   width: 100%;
   height: 100%;
-  background-image: url("/images/aboutcabin1.jpg");
+  background-image: url("../images/aboutcabin1.jpg");
 }
 
 .aboutCabin .aboutCabin__item.aboutCabin-img1 .aboutCabinPic2 {
   background-size: cover;
   width: 100%;
   height: 100%;
-  background-image: url("/images/aboutcabin2.jpg");
+  background-image: url("../images/aboutcabin2.jpg");
 }
 
 .aboutCabin .aboutCabin__item.aboutCabin-img1 .aboutCabinPic3 {
   background-size: cover;
   width: 100%;
   height: 100%;
-  background-image: url("/images/aboutcabin3.jpg");
+  background-image: url("../images/aboutcabin3.jpg");
 }
 
 .aboutCabin .aboutCabin__item.aboutCabin-img1 .aboutCabinPic4 {
   background-size: cover;
   width: 100%;
   height: 100%;
-  background-image: url("/images/aboutcabin4.jpg");
+  background-image: url("../images/aboutcabin4.jpg");
 }
 
 .aboutCabin .aboutCabin__item.aboutCabin-img1 .aboutCabin__container {
@@ -1117,28 +1117,28 @@ main {
   background-size: cover;
   width: 100%;
   height: 100%;
-  background-image: url("/images/aboutcabin1.jpg");
+  background-image: url("../images/aboutcabin1.jpg");
 }
 
 .aboutCabin .aboutCabin__item.aboutCabin-img2 .aboutCabinPic2 {
   background-size: cover;
   width: 100%;
   height: 100%;
-  background-image: url("/images/aboutcabin2.jpg");
+  background-image: url("../images/aboutcabin2.jpg");
 }
 
 .aboutCabin .aboutCabin__item.aboutCabin-img2 .aboutCabinPic3 {
   background-size: cover;
   width: 100%;
   height: 100%;
-  background-image: url("/images/aboutcabin3.jpg");
+  background-image: url("../images/aboutcabin3.jpg");
 }
 
 .aboutCabin .aboutCabin__item.aboutCabin-img2 .aboutCabinPic4 {
   background-size: cover;
   width: 100%;
   height: 100%;
-  background-image: url("/images/aboutcabin4.jpg");
+  background-image: url("../images/aboutcabin4.jpg");
 }
 
 .aboutCabin .aboutCabin__item.aboutCabin-img2 .aboutCabin__container {
@@ -1306,28 +1306,28 @@ main {
   background-size: cover;
   width: 100%;
   height: 100%;
-  background-image: url("/images/aboutcabin1.jpg");
+  background-image: url("../images/aboutcabin1.jpg");
 }
 
 .aboutCabin .aboutCabin__item.aboutCabin-img3 .aboutCabinPic2 {
   background-size: cover;
   width: 100%;
   height: 100%;
-  background-image: url("/images/aboutcabin2.jpg");
+  background-image: url("../images/aboutcabin2.jpg");
 }
 
 .aboutCabin .aboutCabin__item.aboutCabin-img3 .aboutCabinPic3 {
   background-size: cover;
   width: 100%;
   height: 100%;
-  background-image: url("/images/aboutcabin3.jpg");
+  background-image: url("../images/aboutcabin3.jpg");
 }
 
 .aboutCabin .aboutCabin__item.aboutCabin-img3 .aboutCabinPic4 {
   background-size: cover;
   width: 100%;
   height: 100%;
-  background-image: url("/images/aboutcabin4.jpg");
+  background-image: url("../images/aboutcabin4.jpg");
 }
 
 .aboutCabin .aboutCabin__item.aboutCabin-img3 .aboutCabin__container {
@@ -1495,28 +1495,28 @@ main {
   background-size: cover;
   width: 100%;
   height: 100%;
-  background-image: url("/images/aboutcabin1.jpg");
+  background-image: url("../images/aboutcabin1.jpg");
 }
 
 .aboutCabin .aboutCabin__item.aboutCabin-img4 .aboutCabinPic2 {
   background-size: cover;
   width: 100%;
   height: 100%;
-  background-image: url("/images/aboutcabin2.jpg");
+  background-image: url("../images/aboutcabin2.jpg");
 }
 
 .aboutCabin .aboutCabin__item.aboutCabin-img4 .aboutCabinPic3 {
   background-size: cover;
   width: 100%;
   height: 100%;
-  background-image: url("/images/aboutcabin3.jpg");
+  background-image: url("../images/aboutcabin3.jpg");
 }
 
 .aboutCabin .aboutCabin__item.aboutCabin-img4 .aboutCabinPic4 {
   background-size: cover;
   width: 100%;
   height: 100%;
-  background-image: url("/images/aboutcabin4.jpg");
+  background-image: url("../images/aboutcabin4.jpg");
 }
 
 .aboutCabin .aboutCabin__item.aboutCabin-img4 .aboutCabin__container {
