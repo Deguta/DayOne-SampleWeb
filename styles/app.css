@@ -18,13 +18,12 @@ main {
   text-align: right;
   height: 50px;
   position: fixed;
-  z-index: 100;
+  z-index: 1000;
   width: 100%;
 }
 
 .header .header-logo {
-  vertical-align: middle;
-  margin: auto 0;
+  margin: 10px;
   left: 15px;
 }
 
@@ -63,6 +62,10 @@ main {
   font-size: 14px;
 }
 
+.header .header-box .header-nav__item .mobile-menu-icon {
+  display: none;
+}
+
 .header .header-box .header-login {
   position: absolute;
   right: 150px;
@@ -90,39 +93,131 @@ main {
   font-size: 14px;
 }
 
-.header.inview {
+.header.menu-open {
   width: 100%;
   height: 100vh;
-  background-color: brown;
-  z-index: 101;
+  background-color: white;
+  z-index: 1000;
   display: block;
 }
 
-.header.inview .header-logo {
+.header.menu-open .header-logo {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 50px 10px;
+}
+
+.header.menu-open .header-logo .mobile-menu-icon {
+  margin: 0 20px;
+}
+
+.header.menu-open .header-logo .mobile-menu-icon > span {
+  background-color: black;
+}
+
+.header.menu-open .header-logo .mobile-menu-icon > span:nth-child(1) {
+  -webkit-transform: translateY(11px) rotate(135deg);
+          transform: translateY(11px) rotate(135deg);
+}
+
+.header.menu-open .header-logo .mobile-menu-icon > span:nth-child(2) {
+  -webkit-transform: translateX(-18px) scaleX(0);
+          transform: translateX(-18px) scaleX(0);
+}
+
+.header.menu-open .header-logo .mobile-menu-icon > span:nth-child(3) {
+  -webkit-transform: translateY(-11px) rotate(-135deg);
+          transform: translateY(-11px) rotate(-135deg);
+}
+
+.header.menu-open .header-box {
+  display: block;
+}
+
+.header.menu-open .header-box .header-nav {
+  display: block;
   text-align: left;
 }
 
-.header.inview .header-box {
+.header.menu-open .header-box .header-nav__item {
+  margin: initial;
   display: block;
-}
-
-.header.inview .header-box .header-nav {
-  display: block;
+  color: #000;
+  font-size: 15px;
+  font-weight: normal;
   text-align: left;
+  line-height: 20px;
+  padding: 15px 0;
+  border-bottom: 1px solid #DDD;
+  position: relative;
 }
 
-.header.inview .header-box .header-login {
-  left: 0;
+.header.menu-open .header-box .header-nav__item--link {
+  color: black;
+  margin-left: 20px;
 }
 
-.header.inview .header-lang {
-  right: initial;
+.header.menu-open .header-box .header-nav__item--link.menu-open {
+  width: 90%;
+  display: block;
+  color: white;
+  background: #d29427;
+  margin: 30px auto;
+  line-height: 48px;
+  text-align: center;
+  cursor: pointer;
+  border-bottom: 0px solid #DDD;
+}
+
+.header.menu-open .header-box .header-nav__item.bottom {
+  border-bottom: none;
+}
+
+.header.menu-open .header-box .header-login {
+  display: none;
+}
+
+.header.menu-open .header-lang {
+  display: none;
 }
 
 @media screen and (max-width: 1100px) {
   .header {
-    margin: 5px;
     text-align: left;
+  }
+  .header .header-logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+  }
+  .header .header-logo .mobile-menu-icon {
+    background-color: transparent;
+    border: none;
+    outline: none !important;
+    cursor: pointer;
+  }
+  .header .header-logo .mobile-menu-icon > span {
+    background-color: white;
+    width: 35px;
+    height: 2px;
+    display: block;
+    margin-bottom: 9px;
+    -webkit-transition: -webkit-transform 0.7s;
+    transition: -webkit-transform 0.7s;
+    transition: transform 0.7s;
+    transition: transform 0.7s, -webkit-transform 0.7s;
+  }
+  .header .header-logo .mobile-menu-icon > span:last-child {
+    margin-bottom: 0px;
   }
   .header .header-box {
     display: none;
@@ -195,7 +290,7 @@ main {
   right: 0;
   left: 0;
   bottom: 0;
-  z-index: 9999;
+  z-index: 101;
 }
 
 .search__body {
@@ -531,7 +626,7 @@ main {
   position: relative;
   text-align: center;
   overflow: hidden;
-  z-index: 1000;
+  z-index: 100;
 }
 
 .compactLuxury a {
@@ -1781,6 +1876,7 @@ main {
 
 .footer__box .footer-sns__list--item .footer-sns--image {
   color: #FFF;
+  width: 24px;
 }
 
 @media screen and (max-width: 1100px) {

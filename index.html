@@ -23,7 +23,17 @@
         <a href="/" class="header-logo__link">
           <img alt="FIRST CABIN" class="header-logo__link--img" src="/images/firstcabin-logo1.png">
         </a>
+        <button class="mobile-menu-icon" onclick="document.querySelector('.header').classList.toggle('menu-open');">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
+      <!-- <button class="mobile-menu-icon" onclick="document.querySelector('.header').classList.toggle('menu-open');">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button> -->
       <div class="header-box">
         <ul class="header-nav">
           <li class="header-nav__item">
@@ -41,8 +51,8 @@
           <li class="header-nav__item">
             <a href="/faq/" class="header-nav__item--link">よくある質問</a>
           </li>
-          <li class="header-nav__item">
-            <a href="#" class="header-nav__item--link">空室検索</a>
+          <li class="header-nav__item bottom">
+            <a href="#" class="header-nav__item--link menu-open">空室検索</a>
           </li>
         </ul>
         <div class="header-login">
