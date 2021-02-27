@@ -3,28 +3,28 @@
     background-size: cover;
     width: 100%;
     height: 100%;
-    background-image: url("../images/aboutcabin1.jpg");
+    background-image: url("../images/hotel-940730_1920.jpg");
     // transition: all 1s;
   }
   .aboutCabinPic2 {
     background-size: cover;
     width: 100%;
     height: 100%;
-    background-image: url("../images/aboutcabin2.jpg");
+    background-image: url("../images/hotel-1209021.jpg");
     // transition: all 1s;
   }
   .aboutCabinPic3 {
     background-size: cover;
     width: 100%;
     height: 100%;
-    background-image: url("../images/aboutcabin3.jpg");
+    background-image: url("../images/hotel-2331757_1920.jpg");
     // transition: all 1s;
   }
   .aboutCabinPic4 {
     background-size: cover;
     width: 100%;
     height: 100%;
-    background-image: url("../images/aboutcabin4.jpg");
+    background-image: url("../images/hotel-room-1447201_1920.jpg");
     // transition: all 1s;
   }
 
@@ -207,6 +207,10 @@ main {
       }
     }
   }
+
+  .mobile-menu-icon {
+    display: none;
+  }
   
   .header-box {
     width: 100%;
@@ -224,9 +228,6 @@ main {
           color: white;
           text-decoration: none;
           font-size: 14px;
-        }
-        .mobile-menu-icon {
-          display: none;
         }
       }
     }
@@ -255,84 +256,13 @@ main {
   }
 }
 .header.menu-open {
-  width: 100%;
-  height: 100vh;
-  background-color: white;
-  z-index: 1000;
-  display: block;
-  .header-logo {
-    text-align: center;
-    display: flex;
-    justify-content: space-between;
-    margin: 50px 10px;
-    &__link {
-    }
-    .mobile-menu-icon {
-      // margin: inherit;
-      margin: 0 20px;
-      & > span {
-        background-color: black;
-        &:nth-child(1) {
-          transform: translateY(11px) rotate(135deg);
-        }
-        &:nth-child(2) {
-          transform: translateX(-18px) scaleX(0);
-        }
-        &:nth-child(3) {
-          transform: translateY(-11px) rotate(-135deg);
-        }
-      }
-    }
-    
-  }
-  .header-box {
-    display: block;
-    .header-nav {
-      display: block;
-      text-align: left;
-      &__item {
-        margin: initial;
-        display: block;
-        color: #000;
-        font-size: 15px;
-        font-weight: normal;
-        text-align: left;
-        line-height: 20px;
-        padding: 15px 0;
-        // border-top: none;
-        border-bottom: 1px solid #DDD;
-        position: relative;
-        &--link {
-          color: black;
-          margin-left: 20px;
-        }
-        &--link.menu-open {
-          width: 90%;
-          display: block;
-          color: white;
-          // height: auto;
-          background: #d29427;
-          margin: 30px auto;
-          line-height: 48px;
-          text-align: center;
-          cursor: pointer;
-          border-bottom: 0px solid #DDD;
-        }
-      }
-      &__item.bottom {
-        border-bottom: none;
-      }
-    }
-    .header-login {
-      display: none;
-    }
-  }
-  .header-lang {
+  .mobile-menu-icon {
     display: none;
-    // right: initial;
   }
 }
 
+
+//1100px以下はハンバーガーメニューを表示
 @media screen and (max-width: 1100px) {
   .header {
     text-align: left;
@@ -346,6 +276,7 @@ main {
         }
       }
       .mobile-menu-icon {
+        display: initial;
         background-color: transparent;
         border: none;
         outline: none !important;
@@ -370,7 +301,87 @@ main {
     .header-lang {
       display: none;
     }
-  } 
+  }
+  //ハンバーガーメニューをクリック時
+.header.menu-open {
+  width: 100%;
+  height: 100vh;
+  background-color: #463f47;
+  z-index: 1000;
+  display: block;
+  .header-logo {
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    margin: 50px 10px;
+    &__link {
+    }
+    .mobile-menu-icon {
+      // margin: inherit;
+      display: initial;
+      margin: 0 20px;
+      & > span {
+        background-color: white;
+        &:nth-child(1) {
+          transform: translateY(11px) rotate(135deg);
+        }
+        &:nth-child(2) {
+          transform: translateX(-18px) scaleX(0);
+        }
+        &:nth-child(3) {
+          transform: translateY(-11px) rotate(-135deg);
+        }
+      }
+    }
+    
+  }
+  .header-box {
+    display: block;
+    .header-nav {
+      display: block;
+      text-align: left;
+      &__item {
+        margin: initial;
+        display: block;
+        font-size: 15px;
+        font-weight: normal;
+        text-align: left;
+        line-height: 20px;
+        padding: 15px 0;
+        // border-top: none;
+        border-bottom: 1px solid #DDD;
+        position: relative;
+        &--link {
+          color: white;
+          margin-left: 20px;
+        }
+        &--link.menu-open {
+          width: 90%;
+          display: block;
+          color: white;
+          // height: auto;
+          background: #d29427;
+          margin: 30px auto;
+          line-height: 48px;
+          text-align: center;
+          cursor: pointer;
+          border-bottom: 0px solid #DDD;
+        }
+      }
+      &__item.bottom {
+        border-bottom: none;
+        margin: 60px auto;
+      }
+    }
+    .header-login {
+      display: none;
+    }
+  }
+  .header-lang {
+    display: none;
+    // right: initial;
+  }
+}
 }
 
 .outview {
@@ -392,7 +403,7 @@ main {
         height: auto;
         position: absolute;
         opacity: 0;
-        animation: slider01 15s infinite;
+        animation: slider01 30s infinite;
       }
       
       #img02 {
@@ -400,7 +411,7 @@ main {
         height: auto;
         opacity: 0;
         position: absolute;
-        animation: slider02 15s 5s infinite;
+        animation: slider02 30s 10s infinite;
       }
       
       #img03 {
@@ -408,7 +419,7 @@ main {
         height: auto;
         opacity: 0;
         position: absolute;
-        animation: slider03 15s 10s infinite;
+        animation: slider03 30s 20s infinite;
       }
     }
   }
@@ -559,32 +570,38 @@ main {
         transition-duration:0.5s;
         
         .info__block--img1 {
-          background-image:url(https://d2vvrahedad96d.cloudfront.net/images/1e981c36-432d-4a91-8759-c0a6147138ef.jpg);
+          // background-image:url(https://d2vvrahedad96d.cloudfront.net/images/1e981c36-432d-4a91-8759-c0a6147138ef.jpg);
+          background-image: url("../images/swimming-2392283_1920.jpg");
           background-size:cover;
           height: 200px;
         }
         .info__block--img2 {
-          background-image:url(https://d2vvrahedad96d.cloudfront.net/images/a4f37fd3-e4cc-43cd-9b85-02d3e731e32a.jpg);
+          // background-image:url(https://d2vvrahedad96d.cloudfront.net/images/a4f37fd3-e4cc-43cd-9b85-02d3e731e32a.jpg);
+          background-image: url("../images/airport-2373727_1920.jpg");
           background-size:cover;
           height: 200px;
         }
         .info__block--img3 {
-          background-image:url(https://d2vvrahedad96d.cloudfront.net/images/a00babe4-94ef-436d-a276-2031164197f3.jpg);
+          // background-image:url(https://d2vvrahedad96d.cloudfront.net/images/a00babe4-94ef-436d-a276-2031164197f3.jpg);
+          background-image: url("../images/towel-759980_1920.jpg");
           background-size:cover;
           height: 200px;
         }
         .info__block--img4 {
-          background-image:url(https://d2vvrahedad96d.cloudfront.net/images/10359efc-c15a-4be6-aabc-be235ca98b6c.jpg);
+          // background-image:url(https://d2vvrahedad96d.cloudfront.net/images/10359efc-c15a-4be6-aabc-be235ca98b6c.jpg);
+          background-image: url("../images/plane-841441_1920.jpg");
           background-size:cover;
           height: 200px;
         }
         .info__block--img5 {
-          background-image:url(https://d2vvrahedad96d.cloudfront.net/images/cc91dcd3-fac4-49a0-99d9-bd8c50ad5bf6.jpg);
+          // background-image:url(https://d2vvrahedad96d.cloudfront.net/images/cc91dcd3-fac4-49a0-99d9-bd8c50ad5bf6.jpg);
+          background-image: url("../images/wellness-285587_1920.jpg");
           background-size:cover;
           height: 200px;
         }
         .info__block--img6 {
-          background-image:url(https://d2vvrahedad96d.cloudfront.net/images/faa79bff-66c4-4a87-b5c5-2e37703db7e6.jpg);
+          // background-image:url(https://d2vvrahedad96d.cloudfront.net/images/faa79bff-66c4-4a87-b5c5-2e37703db7e6.jpg);
+          background-image: url("../images/winter-5914653_640.jpg");
           background-size:cover;
           height: 200px;
         }
@@ -692,12 +709,13 @@ main {
   z-index: 100;
   a {
     text-decoration: none;
+    cursor: pointer;
   }
   .compactLuxury-img {
     width: 1500px;
     height: 100%;
     position: absolute;
-    background-image: url("../images/luxury2.jpg");
+    background-image: url("../images/hotel-1330850_1920.jpg");
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -793,7 +811,7 @@ main {
 
       }
       .compactLuxury__ttl {
-        color: white;
+        color: black;
         text-decoration: none;
         border-style: none;
         font-size: 2.2em;
@@ -802,16 +820,18 @@ main {
         padding-bottom: 30px;
         margin-bottom: 25px;
         position: relative;
+        cursor: default;
         .word {
           font-size: 52px;
         }
       }
       .compactLuxury__text {
-        color: white;
+        color: black;
         text-decoration: none;
         font-size: 12px;
         line-height: 2.4em;
         font-weight: bold;
+        cursor: default;
       }
       .compactLuxury-btn {
         opacity: 0; 
@@ -826,8 +846,6 @@ main {
     }
   }
   
-
-
   .compactLuxury__block.inview {
     @include animation($name:kf-fadein-animate, $duration: 2s);
     // top: 50%;
@@ -851,11 +869,13 @@ main {
 }
 @media screen and (max-width: 1100px) {
   .compactLuxury {
+    pointer-events: none;
     .compactLuxury-img {
     }
     .compactLuxury__block {
       .compactLuxury__inner{
         .compactLuxury__ttl{
+          padding-bottom: 0px;
           .word{
             font-size: 30px;
           }
@@ -872,6 +892,9 @@ main {
             // padding: 40px 15px 70px;
             margin-top: 50px;
             @include btn();
+            .mainBtn {
+              margin-top: 20px;
+            }
           } 
         } 
       }
@@ -1127,10 +1150,17 @@ main {
           font-size: 13px;
         }
         &--item {
-          .footer-sns--image {
-            color: #FFF;
-            width: 24px;
+          display: flex;
+          a {
+            margin-right: 20px;
+            .footer-sns--image {
+              display: block;
+              color: #FFF;
+              margin-right: 20px;
+  
+            }
           }
+
         }
       }
     }
@@ -1157,6 +1187,7 @@ main {
         text-align: center;
         &__list {
           &--item {
+            justify-content: center;
             .footer-sns--image {
               margin: 0 10px;
             }
@@ -1201,15 +1232,19 @@ main {
     opacity: 1;
     transform: translateX(-100%);
   }
-  20% {
+  10% {
     transform: translate(0%);
     opacity: 1;
   }
-  40% {
+  15% {
     transform: translate(0%) scale(1.1);
     opacity: 1;
   }
-  60% {
+  35% {
+    transform: translate(0%) scale(1.1);
+    opacity: 1;
+  }
+  50% {
     opacity: 0;
     transform: translateX(-50%);
   }
@@ -1220,15 +1255,19 @@ main {
     opacity: 0;
     transform: translateX(100%);
   }
-  20% {
+  10% {
     transform: translate(0%);
     opacity: 1;
   }
-  40% {
+  15% {
     transform: translate(0%) scale(1.1);
     opacity: 1;
   }
-  60% {
+  35% {
+    transform: translate(0%) scale(1.1);
+    opacity: 1;
+  }
+  50% {
     opacity: 0;
     transform: translateY(50%);
   }
@@ -1239,15 +1278,19 @@ main {
     opacity: 0;
     transform: translateY(-100%);
   }
-  20% {
+  10% {
     transform: translate(0%);
     opacity: 1;
   }
-  40% {
+  15% {
     transform: translate(0%) scale(1.1);
     opacity: 1;
   }
-  60% {
+  42% {
+    transform: translate(0%) scale(1.1);
+    opacity: 1;
+  }
+  50% {
     opacity: 0;
     transform: translateX(50%);
   }
