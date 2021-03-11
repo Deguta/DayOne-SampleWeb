@@ -1,3 +1,4 @@
+// -----カラー定義-----
 $white:#fff;
 $mainColor:#f5f5f5;
 $gray:#463f47;
@@ -7,34 +8,31 @@ $gold:#ffd000;
 $black: black;
 
 
+// -----mixin定義-----
 @mixin about-cabin {
   .aboutCabinPic1 {
     background-size: cover;
     width: 100%;
     height: 100%;
     background-image: url("../images/hotel-940730_1920.jpg");
-    // transition: all 1s;
   }
   .aboutCabinPic2 {
     background-size: cover;
     width: 100%;
     height: 100%;
     background-image: url("../images/hotel-1209021.jpg");
-    // transition: all 1s;
   }
   .aboutCabinPic3 {
     background-size: cover;
     width: 100%;
     height: 100%;
     background-image: url("../images/hotel-2331757_1920.jpg");
-    // transition: all 1s;
   }
   .aboutCabinPic4 {
     background-size: cover;
     width: 100%;
     height: 100%;
     background-image: url("../images/hotel-room-1447201_1920.jpg");
-    // transition: all 1s;
   }
 
   .aboutCabin__container {
@@ -57,7 +55,6 @@ $black: black;
           font-size: 38px;
           font-weight: normal;
           line-height: 1.2;
-          // margin-top: 200px;
         }
         .aboutCabin__ttlSub {
           font-size: 15px;
@@ -66,7 +63,6 @@ $black: black;
           height: 80px;
         }
         .aboutCabin__item--txt {
-          @include animation($name:kf-fadein-animate, $duration: 0s);
           opacity: 0; 
           visibility: hidden;
           transition: all 0s;
@@ -74,7 +70,6 @@ $black: black;
         }
   
         .aboutCabin__item--btn {
-          @include animation($name:kf-fadein-animate, $duration: 0s);
           opacity: 0; 
           visibility: hidden;
           transition: all 0s;
@@ -90,7 +85,6 @@ $black: black;
   .aboutCabin__container.inview {
     top: 50%;
     transition: all 1s;
-    @include animation($name:kf-fadein-animate, $duration: 2s);
     .aboutCabin__block {
 
       .aboutCabin__item--txt.inview {    
@@ -130,9 +124,7 @@ $black: black;
 
 @mixin lctList {
   .ll-container__block {
-    // margin: auto 0;
     .ll-container__inner {
-      // text-align: center;
       padding: 30px;
       color: white;
       .ll-container__item--ttl {
@@ -214,7 +206,9 @@ $black: black;
   opacity: 0;
 }
 
+// -----ここからcssの記述-----
 
+// -----リセットCSS-----
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{
   margin:0;
   padding:0;
@@ -224,10 +218,12 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
   vertical-align:baseline;
 }
 
+//-----ベースカラー-----
 main {
   background-color: $mainColor;
 }
 
+//-----ヘッダーの記述-----
 .header {
   display: flex;
   height: 50px;
@@ -282,7 +278,6 @@ main {
 
   .header-lang {
     line-height: 50px;
-    // align-items: center;
     position: absolute;
     right: 50px;
     &__link {
@@ -292,14 +287,8 @@ main {
     }
   }
 }
-.header.menu-open {
-  .mobile-menu-icon {
-    display: none;
-  }
-}
 
-
-//1100px以下はハンバーガーメニューを表示
+//-----1100px以下はハンバーガーメニューを表示-----
 @media screen and (max-width: 1100px) {
   .header {
     text-align: left;
@@ -320,9 +309,6 @@ main {
           display: block;
           margin-bottom: 9px;
           transition: transform 0.7s;
-          // &:last-child {
-          //   margin-bottom: 0px;
-          // }
         }
       }
     }
@@ -335,7 +321,7 @@ main {
     }
   }
 
-//ハンバーガーメニューをクリック時
+//-----ハンバーガーメニューをクリック時-----
 .header.menu-open {
   width: 100%;
   height: 100vh;
@@ -347,10 +333,7 @@ main {
     display: flex;
     justify-content: space-between;
     margin: 50px 10px;
-    // &__link {
-    // }
     .mobile-menu-icon {
-      // margin: inherit;
       display: initial;
       margin: 0 20px;
       & > span {
@@ -381,7 +364,6 @@ main {
         text-align: left;
         line-height: 20px;
         padding: 15px 0;
-        // border-top: none;
         border-bottom: 1px solid #DDD;
         position: relative;
         &--link {
@@ -392,7 +374,6 @@ main {
           width: 90%;
           display: block;
           color: $white;
-          // height: auto;
           background: $orange;
           margin: 30px auto;
           line-height: 48px;
@@ -412,15 +393,16 @@ main {
   }
   .header-lang {
     display: none;
-    // right: initial;
   }
 }
 }
 
+//-----画面を下にスクロールしたときのヘッダーの処理（outviewを付与し非表示にする）-----
 .outview {
   display: none;
 }
 
+// -----トップ画面（ヒーロースライダー画面）-----
 .topMain {
   .topMain-Block {
     overflow: hidden;
@@ -432,32 +414,23 @@ main {
       height: 100vh;
       overflow: hidden;
       #img01 {
-        // width: 100%;
-        // height: auto;
-        // position: absolute;
-        // opacity: 0;
         @include img();
         animation: slider01 30s infinite;
       }
       
       #img02 {
-        // width: 100%;
-        // height: auto;
-        // opacity: 0;
-        // position: absolute;
+        @include img(); 
         animation: slider02 30s -20s infinite;
       }
       
       #img03 {
-        // width: 100%;
-        // height: auto;
-        // opacity: 0;
-        // position: absolute;
+        @include img();
         animation: slider03 30s -10s infinite;
       }
     }
   }
 }
+// -----トップ画面（ヒーロースライダー画面）のレスポンシブ処理-----
 @media screen and (max-width: 1100px) {
   .topMain {
     .topMain-Block {
@@ -476,6 +449,7 @@ main {
   }
 }
 
+// -----空室検索部分-----
 .search {
   background: rgba(40, 30, 42, 0.7);
   text-align: center;
@@ -531,9 +505,7 @@ main {
         display: inline-block;
         color: $white;
         min-height: 48px;
-        // height: auto;
         width: 170px;
-        // opacity: 0.7;
         @include btn();
         .mainBtn__container {
           background: transparent;
@@ -542,6 +514,8 @@ main {
     }
   }
 }
+
+// -----空室検索部分のレスポンシブ処理-----
 @media screen and (max-width: 1100px) {
   .search {
     &__body {
@@ -560,14 +534,10 @@ main {
   }
 }
 
-// .outview {
-//   display: none;
-// }
-
+// -----タイトル部分（information、about day one）-----
 .info-ttl {
   padding: 61px 0 44px 0;
   text-align: center;
-  // background-color: #f5f5f5;
   &--main {
     line-height: 1.2;
     margin-bottom: 5px;
@@ -575,6 +545,8 @@ main {
     color: $purple
   }
 }
+
+// -----タイトル部分のレスポンシブ処理-----
 @media screen and (max-width: 1100px) {
   .info-ttl {
     &--main {
@@ -583,9 +555,9 @@ main {
   }
 }
 
+// -----information画面-----
 .info {
   width: 100%;
-  // background-color: #f5f5f5;
   &__block {
     margin: 0 130px;
     display: block;
@@ -633,6 +605,8 @@ main {
     }
   }
 }
+
+// -----information画面のレスポンシブ処理-----
 @media screen and (max-width: 1280px) {
   .info {
     &__block {
@@ -669,7 +643,7 @@ main {
   }
 } 
 
-
+// -----information下のお知らせ一覧-----
 .infoSearch {
   text-align: center;
   margin: 50px auto;
@@ -700,6 +674,8 @@ main {
     @include btn();
   } 
 }
+
+// -----information下のお知らせ一覧のレスポンシブ-----
 @media screen and (max-width: 1100px) {
   .infoSearch {
     display: block;
@@ -713,7 +689,7 @@ main {
   }
 } 
 
-// compact&luxury画面
+// -----compact&luxury画面-----
 .compactLuxury {
   height: 100vh;
   position: relative;
@@ -723,7 +699,7 @@ main {
     cursor: pointer;
   }
   .compactLuxury-img {
-    width: 1500px;
+    width: 100%;
     height: 100%;
     position: absolute;
     background-image: url("../images/hotel-1330850_1920.jpg");
@@ -741,7 +717,7 @@ main {
       display: inline-block;
       color: $white;
       transition: all 5s;
-      // スター部分の記述
+      // -----スター部分の記述-----
       &--star {
         font-size: 14px;
         color: $gold;
@@ -850,9 +826,8 @@ main {
     }
   }
   
-  // compact&luxury画面 ホバーしたときの処理
+  // -----compact&luxury画面 ホバーしたときの処理-----
   .compactLuxury__block.inview {
-    @include animation($name:kf-fadein-animate, $duration: 2s);
     .compactLuxury__inner {
       .compactLuxury-btn.inview {
         opacity: 1;
@@ -867,7 +842,7 @@ main {
   }
 
 }
-// compact&luxury画面 レスポンシブ処理
+// -----compact&luxury画面 レスポンシブ処理-----
 @media screen and (max-width: 1100px) {
   .compactLuxury {
     pointer-events: none;
@@ -898,7 +873,7 @@ main {
   }
 } 
 
-// aboutCabin画面
+// -----aboutCabin画面-----
 .aboutCabin {
   margin: 0 auto;
   text-align: center;
@@ -978,6 +953,7 @@ main {
   }
 }
 
+// -----aboutCabin画面のレスポンシブ処理-----
 @media screen and (max-width: 1100px) {
   .aboutCabin {
     pointer-events: none;
@@ -1007,6 +983,7 @@ main {
   }
 }
 
+//-----施設一覧ボタン-----
 .facilityAll {
   .mainBtn {
     padding: 40px 15px 70px;
@@ -1014,7 +991,7 @@ main {
   } 
 }
 
-
+// -----フッター画面-----
 .footer {
   background: $gray;
   &__logo {
@@ -1028,7 +1005,6 @@ main {
   &__box {
     display: flex;
     margin: 0 auto;
-    // padding-bottom: 60px;
     padding: 0 20px 60px 20px;
     .footer__cont {
       width: 78%;
@@ -1069,21 +1045,17 @@ main {
               display: block;
               color: #FFF;
               margin-right: 20px;
-  
             }
           }
-
         }
       }
     }
   }
 }
+
+// -----フッター画面のレスポンシブ処理-----
 @media screen and (max-width: 1100px) {
   .footer {
-    &__logo {
-      &--image {
-      }
-    }
     &__box {
       display: block;
       .footer__cont {
@@ -1110,35 +1082,19 @@ main {
   }
 }
 
+// -----コピー禁止記述部分-----
 .footer__copy {
   background: $gray;
   text-align: center;
   padding: 20px 0;
   font-size: 10px;
   color: rgba(255, 255, 255, .3);
-  // color: black;
   box-sizing: border-box;
   border-top: solid 1px #504852;
   font-style: normal;
 }
 
-
-@keyframes kf-zoomout-animate {
-  100% { 
-    transform: scale(1.1);
-  }
-}
-
-@keyframes kf-fadein-animate {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-
+// -----keyframesの定義-----
 @keyframes slider01 {
   0% {
     opacity: 1;

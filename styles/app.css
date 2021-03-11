@@ -89,10 +89,6 @@ main {
   font-size: 14px;
 }
 
-.header.menu-open .mobile-menu-icon {
-  display: none;
-}
-
 @media screen and (max-width: 1100px) {
   .header {
     text-align: left;
@@ -241,6 +237,7 @@ main {
   width: 100%;
   height: auto;
   position: absolute;
+  opacity: 0;
   -webkit-animation: slider02 30s -20s infinite;
           animation: slider02 30s -20s infinite;
 }
@@ -249,6 +246,7 @@ main {
   width: 100%;
   height: auto;
   position: absolute;
+  opacity: 0;
   -webkit-animation: slider03 30s -10s infinite;
           animation: slider03 30s -10s infinite;
 }
@@ -606,7 +604,7 @@ main {
 }
 
 .compactLuxury .compactLuxury-img {
-  width: 1500px;
+  width: 100%;
   height: 100%;
   position: absolute;
   background-image: url("../images/hotel-1330850_1920.jpg");
@@ -779,23 +777,6 @@ main {
   opacity: 0.7;
 }
 
-.compactLuxury .compactLuxury__block.inview {
-  -webkit-animation-name: kf-fadein-animate;
-          animation-name: kf-fadein-animate;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-  -webkit-animation-timing-function: ease;
-          animation-timing-function: ease;
-  -webkit-animation-delay: 0s;
-          animation-delay: 0s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-direction: normal;
-          animation-direction: normal;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-}
-
 .compactLuxury .compactLuxury__block.inview .compactLuxury__inner .compactLuxury-btn.inview {
   opacity: 1;
   visibility: visible;
@@ -965,20 +946,6 @@ main {
 }
 
 .aboutCabin .aboutCabin__item.aboutCabin-img1 .aboutCabin__container .aboutCabin__block .aboutCabin__inner .aboutCabin__item--txt {
-  -webkit-animation-name: kf-fadein-animate;
-          animation-name: kf-fadein-animate;
-  -webkit-animation-duration: 0s;
-          animation-duration: 0s;
-  -webkit-animation-timing-function: ease;
-          animation-timing-function: ease;
-  -webkit-animation-delay: 0s;
-          animation-delay: 0s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-direction: normal;
-          animation-direction: normal;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
   opacity: 0;
   visibility: hidden;
   -webkit-transition: all 0s;
@@ -987,20 +954,6 @@ main {
 }
 
 .aboutCabin .aboutCabin__item.aboutCabin-img1 .aboutCabin__container .aboutCabin__block .aboutCabin__inner .aboutCabin__item--btn {
-  -webkit-animation-name: kf-fadein-animate;
-          animation-name: kf-fadein-animate;
-  -webkit-animation-duration: 0s;
-          animation-duration: 0s;
-  -webkit-animation-timing-function: ease;
-          animation-timing-function: ease;
-  -webkit-animation-delay: 0s;
-          animation-delay: 0s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-direction: normal;
-          animation-direction: normal;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
   opacity: 0;
   visibility: hidden;
   -webkit-transition: all 0s;
@@ -1040,20 +993,6 @@ main {
   top: 50%;
   -webkit-transition: all 1s;
   transition: all 1s;
-  -webkit-animation-name: kf-fadein-animate;
-          animation-name: kf-fadein-animate;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-  -webkit-animation-timing-function: ease;
-          animation-timing-function: ease;
-  -webkit-animation-delay: 0s;
-          animation-delay: 0s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-direction: normal;
-          animation-direction: normal;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
 }
 
 .aboutCabin .aboutCabin__item.aboutCabin-img1 .aboutCabin__container.inview .aboutCabin__block .aboutCabin__item--txt.inview {
@@ -1154,20 +1093,6 @@ main {
 }
 
 .aboutCabin .aboutCabin__item.aboutCabin-img2 .aboutCabin__container .aboutCabin__block .aboutCabin__inner .aboutCabin__item--txt {
-  -webkit-animation-name: kf-fadein-animate;
-          animation-name: kf-fadein-animate;
-  -webkit-animation-duration: 0s;
-          animation-duration: 0s;
-  -webkit-animation-timing-function: ease;
-          animation-timing-function: ease;
-  -webkit-animation-delay: 0s;
-          animation-delay: 0s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-direction: normal;
-          animation-direction: normal;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
   opacity: 0;
   visibility: hidden;
   -webkit-transition: all 0s;
@@ -1176,20 +1101,6 @@ main {
 }
 
 .aboutCabin .aboutCabin__item.aboutCabin-img2 .aboutCabin__container .aboutCabin__block .aboutCabin__inner .aboutCabin__item--btn {
-  -webkit-animation-name: kf-fadein-animate;
-          animation-name: kf-fadein-animate;
-  -webkit-animation-duration: 0s;
-          animation-duration: 0s;
-  -webkit-animation-timing-function: ease;
-          animation-timing-function: ease;
-  -webkit-animation-delay: 0s;
-          animation-delay: 0s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-direction: normal;
-          animation-direction: normal;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
   opacity: 0;
   visibility: hidden;
   -webkit-transition: all 0s;
@@ -1229,20 +1140,6 @@ main {
   top: 50%;
   -webkit-transition: all 1s;
   transition: all 1s;
-  -webkit-animation-name: kf-fadein-animate;
-          animation-name: kf-fadein-animate;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-  -webkit-animation-timing-function: ease;
-          animation-timing-function: ease;
-  -webkit-animation-delay: 0s;
-          animation-delay: 0s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-direction: normal;
-          animation-direction: normal;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
 }
 
 .aboutCabin .aboutCabin__item.aboutCabin-img2 .aboutCabin__container.inview .aboutCabin__block .aboutCabin__item--txt.inview {
@@ -1343,20 +1240,6 @@ main {
 }
 
 .aboutCabin .aboutCabin__item.aboutCabin-img3 .aboutCabin__container .aboutCabin__block .aboutCabin__inner .aboutCabin__item--txt {
-  -webkit-animation-name: kf-fadein-animate;
-          animation-name: kf-fadein-animate;
-  -webkit-animation-duration: 0s;
-          animation-duration: 0s;
-  -webkit-animation-timing-function: ease;
-          animation-timing-function: ease;
-  -webkit-animation-delay: 0s;
-          animation-delay: 0s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-direction: normal;
-          animation-direction: normal;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
   opacity: 0;
   visibility: hidden;
   -webkit-transition: all 0s;
@@ -1365,20 +1248,6 @@ main {
 }
 
 .aboutCabin .aboutCabin__item.aboutCabin-img3 .aboutCabin__container .aboutCabin__block .aboutCabin__inner .aboutCabin__item--btn {
-  -webkit-animation-name: kf-fadein-animate;
-          animation-name: kf-fadein-animate;
-  -webkit-animation-duration: 0s;
-          animation-duration: 0s;
-  -webkit-animation-timing-function: ease;
-          animation-timing-function: ease;
-  -webkit-animation-delay: 0s;
-          animation-delay: 0s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-direction: normal;
-          animation-direction: normal;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
   opacity: 0;
   visibility: hidden;
   -webkit-transition: all 0s;
@@ -1418,20 +1287,6 @@ main {
   top: 50%;
   -webkit-transition: all 1s;
   transition: all 1s;
-  -webkit-animation-name: kf-fadein-animate;
-          animation-name: kf-fadein-animate;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-  -webkit-animation-timing-function: ease;
-          animation-timing-function: ease;
-  -webkit-animation-delay: 0s;
-          animation-delay: 0s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-direction: normal;
-          animation-direction: normal;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
 }
 
 .aboutCabin .aboutCabin__item.aboutCabin-img3 .aboutCabin__container.inview .aboutCabin__block .aboutCabin__item--txt.inview {
@@ -1532,20 +1387,6 @@ main {
 }
 
 .aboutCabin .aboutCabin__item.aboutCabin-img4 .aboutCabin__container .aboutCabin__block .aboutCabin__inner .aboutCabin__item--txt {
-  -webkit-animation-name: kf-fadein-animate;
-          animation-name: kf-fadein-animate;
-  -webkit-animation-duration: 0s;
-          animation-duration: 0s;
-  -webkit-animation-timing-function: ease;
-          animation-timing-function: ease;
-  -webkit-animation-delay: 0s;
-          animation-delay: 0s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-direction: normal;
-          animation-direction: normal;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
   opacity: 0;
   visibility: hidden;
   -webkit-transition: all 0s;
@@ -1554,20 +1395,6 @@ main {
 }
 
 .aboutCabin .aboutCabin__item.aboutCabin-img4 .aboutCabin__container .aboutCabin__block .aboutCabin__inner .aboutCabin__item--btn {
-  -webkit-animation-name: kf-fadein-animate;
-          animation-name: kf-fadein-animate;
-  -webkit-animation-duration: 0s;
-          animation-duration: 0s;
-  -webkit-animation-timing-function: ease;
-          animation-timing-function: ease;
-  -webkit-animation-delay: 0s;
-          animation-delay: 0s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-direction: normal;
-          animation-direction: normal;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
   opacity: 0;
   visibility: hidden;
   -webkit-transition: all 0s;
@@ -1607,20 +1434,6 @@ main {
   top: 50%;
   -webkit-transition: all 1s;
   transition: all 1s;
-  -webkit-animation-name: kf-fadein-animate;
-          animation-name: kf-fadein-animate;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-  -webkit-animation-timing-function: ease;
-          animation-timing-function: ease;
-  -webkit-animation-delay: 0s;
-          animation-delay: 0s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-direction: normal;
-          animation-direction: normal;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
 }
 
 .aboutCabin .aboutCabin__item.aboutCabin-img4 .aboutCabin__container.inview .aboutCabin__block .aboutCabin__item--txt.inview {
@@ -1901,38 +1714,6 @@ main {
           box-sizing: border-box;
   border-top: solid 1px #504852;
   font-style: normal;
-}
-
-@-webkit-keyframes kf-zoomout-animate {
-  100% {
-    -webkit-transform: scale(1.1);
-            transform: scale(1.1);
-  }
-}
-
-@keyframes kf-zoomout-animate {
-  100% {
-    -webkit-transform: scale(1.1);
-            transform: scale(1.1);
-  }
-}
-
-@-webkit-keyframes kf-fadein-animate {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes kf-fadein-animate {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
 }
 
 @-webkit-keyframes slider01 {
