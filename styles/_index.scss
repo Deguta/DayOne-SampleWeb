@@ -1,3 +1,12 @@
+$white:#fff;
+$mainColor:#f5f5f5;
+$gray:#463f47;
+$orange:#d29427;
+$purple:#754194;
+$gold:#ffd000;
+$black: black;
+
+
 @mixin about-cabin {
   .aboutCabinPic1 {
     background-size: cover;
@@ -42,7 +51,7 @@
       .aboutCabin__inner {
         display: inline-block;
         width: 100%;
-        color: #FFF;
+        color: $white;
         text-align: center;
         .aboutCabin__ttl {
           font-size: 38px;
@@ -96,6 +105,29 @@
   }
 }
 
+@mixin about-cabin-response {
+  .aboutCabin__container {
+    top: 50%;
+    .aboutCabin__block {
+      width: 100%;
+      .aboutCabin__inner {
+        .aboutCabin__ttl {
+          font-size: 30px;
+        }
+        .aboutCabin__item--txt {
+          opacity: 1; 
+          visibility: visible;
+          font-size: 0.8em;
+        }
+        .aboutCabin__item--btn {
+          opacity: 1; 
+          visibility: visible;
+          }
+      }
+    }
+  }
+}
+
 @mixin lctList {
   .ll-container__block {
     // margin: auto 0;
@@ -115,12 +147,12 @@
   width: 29%;
   display: inline-block;
   margin: 40px 20px;
-  background-color: white;
+  background-color: $white;
 }
 
 @mixin info {
   .info__block--cts {
-    background-color: white;
+    background-color: $white;
     padding: 28px 20px;
     .ttl {
       font-size: 15px;
@@ -141,11 +173,11 @@
 
 @mixin btn() {
   .mainBtn__container {
-    color: #fff;
+    color: $white;
     max-width: 170px;
     min-height: 48px;
     height: auto;
-    background: #d29427;
+    background: $orange;
     margin: 0 auto;
     line-height: 48px;
     text-align: center;
@@ -175,6 +207,13 @@
   }
 }
 
+@mixin img {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  opacity: 0;
+}
+
 
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{
   margin:0;
@@ -186,18 +225,16 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 }
 
 main {
-  background-color: #f5f5f5;
+  background-color: $mainColor;
 }
 
 .header {
   display: flex;
-  text-align: right;
   height: 50px;
   position: fixed;
   z-index: 1000;
   width: 100%;
   .header-logo {
-    // vertical-align: middle;
     margin: 10px;
     left: 15px;
     &__link {
@@ -245,7 +282,7 @@ main {
 
   .header-lang {
     line-height: 50px;
-    align-items: center;
+    // align-items: center;
     position: absolute;
     right: 50px;
     &__link {
@@ -270,11 +307,6 @@ main {
       display: flex;
       justify-content: space-between;
       width: 100%;
-      // position: relative;
-      &__link {
-        &--img {
-        }
-      }
       .mobile-menu-icon {
         display: initial;
         background-color: transparent;
@@ -282,15 +314,15 @@ main {
         outline: none !important;
         cursor: pointer;
         & > span {
-          background-color: white;
+          background-color: $white;
           width: 35px;
           height: 2px;
           display: block;
           margin-bottom: 9px;
           transition: transform 0.7s;
-          &:last-child {
-            margin-bottom: 0px;
-          }
+          // &:last-child {
+          //   margin-bottom: 0px;
+          // }
         }
       }
     }
@@ -302,11 +334,12 @@ main {
       display: none;
     }
   }
-  //ハンバーガーメニューをクリック時
+
+//ハンバーガーメニューをクリック時
 .header.menu-open {
   width: 100%;
   height: 100vh;
-  background-color: #463f47;
+  background-color: $gray;
   z-index: 1000;
   display: block;
   .header-logo {
@@ -314,14 +347,14 @@ main {
     display: flex;
     justify-content: space-between;
     margin: 50px 10px;
-    &__link {
-    }
+    // &__link {
+    // }
     .mobile-menu-icon {
       // margin: inherit;
       display: initial;
       margin: 0 20px;
       & > span {
-        background-color: white;
+        background-color: $white;
         &:nth-child(1) {
           transform: translateY(11px) rotate(135deg);
         }
@@ -352,15 +385,15 @@ main {
         border-bottom: 1px solid #DDD;
         position: relative;
         &--link {
-          color: white;
+          color: $white;
           margin-left: 20px;
         }
         &--link.menu-open {
           width: 90%;
           display: block;
-          color: white;
+          color: $white;
           // height: auto;
-          background: #d29427;
+          background: $orange;
           margin: 30px auto;
           line-height: 48px;
           text-align: center;
@@ -399,26 +432,29 @@ main {
       height: 100vh;
       overflow: hidden;
       #img01 {
-        width: 100%;
-        height: auto;
-        position: absolute;
-        opacity: 0;
+        // width: 100%;
+        // height: auto;
+        // position: absolute;
+        // opacity: 0;
+        @include img();
         animation: slider01 30s infinite;
       }
       
       #img02 {
-        width: 100%;
-        height: auto;
-        opacity: 0;
-        position: absolute;
+        // width: 100%;
+        // height: auto;
+        // opacity: 0;
+        // position: absolute;
+        @include img();
         animation: slider02 30s 10s infinite;
       }
       
       #img03 {
-        width: 100%;
-        height: auto;
-        opacity: 0;
-        position: absolute;
+        // width: 100%;
+        // height: auto;
+        // opacity: 0;
+        // position: absolute;
+        @include img();
         animation: slider03 30s 20s infinite;
       }
     }
@@ -431,11 +467,9 @@ main {
         #img01 {
           width: 1200px;
         }
-        
         #img02 {
           width: 1200px;
         }
-        
         #img03 {
           width: 1200px;
         }
@@ -446,9 +480,7 @@ main {
 
 .search {
   background: rgba(40, 30, 42, 0.7);
-  // width: 100%;
   text-align: center;
-  // margin: 0 auto;
   position: fixed;
   right: 0;
   left: 0;
@@ -459,7 +491,6 @@ main {
     .search__items {
       align-items: center;
       .search__area {
-        // width: 300px;
         margin-right: 10px;
         .icon-area {
           font-size: 13px;
@@ -472,7 +503,7 @@ main {
       .search__calender {
         display: inline-block;
         .input-search {
-          background-color: #FFF;
+          background-color: $white;
           width: 240px;
           height: 46px;
         }
@@ -491,20 +522,20 @@ main {
           position: relative;
           cursor: pointer;
           .icon-man-white {
-            color: #FFF;
+            color: $white;
           }
           .icon-woman-white {
-            color: #FFF;
+            color: $white;
           }
         }
       }
       .mainBtn {
         display: inline-block;
-        color: #fff;
+        color: $white;
         min-height: 48px;
-        height: auto;
+        // height: auto;
         width: 170px;
-        opacity: 0.7;
+        // opacity: 0.7;
         @include btn();
         .mainBtn__container {
           background: transparent;
@@ -526,26 +557,24 @@ main {
         .search__sex {
           display: none
         }
-        .mainBtn {
-        }
       }
     }
   }
 }
 
-.outview {
-  display: none;
-}
+// .outview {
+//   display: none;
+// }
 
 .info-ttl {
   padding: 61px 0 44px 0;
   text-align: center;
-  background-color: #f5f5f5;
+  // background-color: #f5f5f5;
   &--main {
     line-height: 1.2;
     margin-bottom: 5px;
     font-size: 44px;
-    color: #754194;
+    color: $purple
   }
 }
 @media screen and (max-width: 1100px) {
@@ -558,7 +587,7 @@ main {
 
 .info {
   width: 100%;
-  background-color: #f5f5f5;
+  // background-color: #f5f5f5;
   &__block {
     margin: 0 130px;
     display: block;
@@ -568,39 +597,32 @@ main {
         display: block;
         text-decoration: none;
         transition-duration:0.5s;
-        
         .info__block--img1 {
-          // background-image:url(https://d2vvrahedad96d.cloudfront.net/images/1e981c36-432d-4a91-8759-c0a6147138ef.jpg);
           background-image: url("../images/swimming-2392283_1920.jpg");
           background-size:cover;
           height: 200px;
         }
         .info__block--img2 {
-          // background-image:url(https://d2vvrahedad96d.cloudfront.net/images/a4f37fd3-e4cc-43cd-9b85-02d3e731e32a.jpg);
           background-image: url("../images/airport-2373727_1920.jpg");
           background-size:cover;
           height: 200px;
         }
         .info__block--img3 {
-          // background-image:url(https://d2vvrahedad96d.cloudfront.net/images/a00babe4-94ef-436d-a276-2031164197f3.jpg);
           background-image: url("../images/towel-759980_1920.jpg");
           background-size:cover;
           height: 200px;
         }
         .info__block--img4 {
-          // background-image:url(https://d2vvrahedad96d.cloudfront.net/images/10359efc-c15a-4be6-aabc-be235ca98b6c.jpg);
           background-image: url("../images/plane-841441_1920.jpg");
           background-size:cover;
           height: 200px;
         }
         .info__block--img5 {
-          // background-image:url(https://d2vvrahedad96d.cloudfront.net/images/cc91dcd3-fac4-49a0-99d9-bd8c50ad5bf6.jpg);
           background-image: url("../images/wellness-285587_1920.jpg");
           background-size:cover;
           height: 200px;
         }
         .info__block--img6 {
-          // background-image:url(https://d2vvrahedad96d.cloudfront.net/images/faa79bff-66c4-4a87-b5c5-2e37703db7e6.jpg);
           background-image: url("../images/winter-5914653_640.jpg");
           background-size:cover;
           height: 200px;
@@ -621,7 +643,6 @@ main {
         width: 100%;
         display: block;
         margin: initial;
-        // background-color: white;
         .info-container {
           display: flex;
           padding: 10px;
@@ -637,12 +658,8 @@ main {
             width: 80%;
             padding: initial;
             margin: 0 5px;
-            .ttl {
-            }
             .date {
               margin: 10px 0;
-            }
-            .location {
             }
           }
         }
@@ -672,13 +689,14 @@ main {
       background-size: 14px;
       cursor: pointer;
       select {
-        width: 120px;
+        width: 170px;
         min-height: 48px;
+        font-size: 16px;
       }
     }
   }
   .mainBtn {
-    background: #fff;
+    background: $white;
     margin: 0 10px;
     width: 170px;
     @include btn();
@@ -688,7 +706,6 @@ main {
   .infoSearch {
     display: block;
     margin: 30px 0;
-    // margin-bottom: 30px;
     .InfoSearchSelect {
       margin-bottom: 30px;
     }
@@ -698,15 +715,11 @@ main {
   }
 } 
 
-
+// compact&luxury画面
 .compactLuxury {
-  display: block;
-  background-size:cover;
   height: 100vh;
   position: relative;
   text-align: center;
-  overflow: hidden;
-  z-index: 100;
   a {
     text-decoration: none;
     cursor: pointer;
@@ -719,7 +732,6 @@ main {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-      // @include animation($name:kf-zoomout-animate, $duration: 5s);
   } 
   .compactLuxury__block {
     position: absolute;
@@ -729,11 +741,12 @@ main {
     transform: translateY(-50%);
     .compactLuxury__inner {
       display: inline-block;
-      color: #FFF;
+      color: $white;
       transition: all 5s;
+      // スター部分の記述
       &--star {
         font-size: 14px;
-        color: #ffd000;
+        color: $gold;
         margin: 30px auto;
         width: 130px;
         height: 42px;
@@ -811,23 +824,16 @@ main {
 
       }
       .compactLuxury__ttl {
-        color: black;
-        text-decoration: none;
-        border-style: none;
-        font-size: 2.2em;
-        font-weight: normal;
-        letter-spacing: normal;
+        color: $black;
         padding-bottom: 30px;
         margin-bottom: 25px;
-        position: relative;
         cursor: default;
         .word {
           font-size: 52px;
         }
       }
       .compactLuxury__text {
-        color: black;
-        text-decoration: none;
+        color: $black;
         font-size: 12px;
         line-height: 2.4em;
         font-weight: bold;
@@ -846,14 +852,10 @@ main {
     }
   }
   
+  // compact&luxury画面 ホバーしたときの処理
   .compactLuxury__block.inview {
     @include animation($name:kf-fadein-animate, $duration: 2s);
-    // top: 50%;
     .compactLuxury__inner {
-      .compactLuxury__ttl {
-      }
-      .compactLuxury__text {
-      }
       .compactLuxury-btn.inview {
         opacity: 1;
         visibility: visible;
@@ -867,11 +869,10 @@ main {
   }
 
 }
+// compact&luxury画面 レスポンシブ処理
 @media screen and (max-width: 1100px) {
   .compactLuxury {
     pointer-events: none;
-    .compactLuxury-img {
-    }
     .compactLuxury__block {
       .compactLuxury__inner{
         .compactLuxury__ttl{
@@ -886,10 +887,7 @@ main {
         }
         .compactLuxury-btn {
           opacity: 1; 
-          visibility: visible;
-          // transition: all 1s;
           .mainBtn {
-            // padding: 40px 15px 70px;
             margin-top: 50px;
             @include btn();
             .mainBtn {
@@ -902,6 +900,7 @@ main {
   }
 } 
 
+// aboutCabin画面
 .aboutCabin {
   margin: 0 auto;
   text-align: center;
@@ -925,7 +924,6 @@ main {
       transform:scale(1.2,1.2);
     }
   }
-
 
   .aboutCabin__item.aboutCabin-img2 {
     cursor: pointer;
@@ -990,107 +988,23 @@ main {
     .aboutCabin__item.aboutCabin-img1 {
       grid-row: 1 / 2;
       grid-column: 1 / 2;
-      // width: 100%;
-      // height: 100%;
       position: relative;
-      .aboutCabinPic1 {
-        // top: 50%;
-        // left: 50%;
-        // transform: translate(-50%, -50%);
-        // position: absolute;
-      }
-      .aboutCabin__container {
-        top: 50%;
-        .aboutCabin__block {
-          width: 100%;
-          .aboutCabin__inner {
-            .aboutCabin__ttl {
-              font-size: 30px;
-            }
-            .aboutCabin__item--txt {
-              opacity: 1; 
-              visibility: visible;
-              font-size: 0.8em;
-            }
-            .aboutCabin__item--btn {
-              opacity: 1; 
-              visibility: visible;
-              }
-          }
-        }
-      }
+      @include about-cabin-response();
     }
     .aboutCabin__item.aboutCabin-img2 {
       grid-row: 2 / 3;
       grid-column: 1 / 2;
-      .aboutCabin__container {
-        top: 50%;
-        .aboutCabin__block {
-          width: 100%;
-          .aboutCabin__inner {
-            .aboutCabin__ttl {
-              font-size: 30px;
-            }
-            .aboutCabin__item--txt {
-              opacity: 1; 
-              visibility: visible;
-              font-size: 0.8em;
-            }
-            .aboutCabin__item--btn {
-              opacity: 1; 
-              visibility: visible;
-              }
-          }
-        }
-      }
+      @include about-cabin-response();
     }
     .aboutCabin__item.aboutCabin-img3 {
       grid-row: 3 / 4;
       grid-column: 1 / 2;
-      .aboutCabin__container {
-        top: 50%;
-        .aboutCabin__block {
-          width: 100%;
-          .aboutCabin__inner {
-            .aboutCabin__ttl {
-              font-size: 30px;
-            }
-            .aboutCabin__item--txt {
-              opacity: 1; 
-              visibility: visible;
-              font-size: 0.8em;
-            }
-            .aboutCabin__item--btn {
-              opacity: 1; 
-              visibility: visible;
-              }
-          }
-        }
-      }
+      @include about-cabin-response();
     }
     .aboutCabin__item.aboutCabin-img4 {
       grid-row: 4 / 5;
       grid-column: 1 / 2;
-      .aboutCabin__container {
-        top: 50%;
-        .aboutCabin__block {
-          width: 100%;
-          .aboutCabin__inner {
-            .aboutCabin__ttl {
-              font-size: 30px;
-            }
-            .aboutCabin__item--txt {
-              opacity: 1; 
-              visibility: visible;
-              font-size: 0.8em;
-            }
-            .aboutCabin__item--btn {
-              opacity: 1; 
-              visibility: visible;
-              }
-          }
-        }
-      }
+      @include about-cabin-response();
     }
   }
 }
@@ -1104,7 +1018,7 @@ main {
 
 
 .footer {
-  background: #463f47;
+  background: $gray;
   &__logo {
     text-align: center;
     padding: 50px 0 60px;
@@ -1199,7 +1113,7 @@ main {
 }
 
 .footer__copy {
-  background: #463f47;
+  background: $gray;
   text-align: center;
   padding: 20px 0;
   font-size: 10px;

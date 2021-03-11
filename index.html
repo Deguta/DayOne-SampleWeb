@@ -12,7 +12,7 @@
   <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
   
   <meta name="csrf-param" content="authenticity_token">
-<meta name="csrf-token" content="Y/TfBFki/LiUyrWoAr5DeMQkNwyln++NDz5Z1VIQ0TVLQJEAJ2NI0xA0XQrY8yPpsa1ExOTf/vg1xsYDBdxEmQ==">
+  <meta name="csrf-token" content="Y/TfBFki/LiUyrWoAr5DeMQkNwyln++NDz5Z1VIQ0TVLQJEAJ2NI0xA0XQrY8yPpsa1ExOTf/vg1xsYDBdxEmQ==">
 
 </head>
 
@@ -30,11 +30,6 @@
           <span></span>
         </button>
       </div>
-      <!-- <button class="mobile-menu-icon" onclick="document.querySelector('.header').classList.toggle('menu-open');">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button> -->
       <div class="header-box">
         <ul class="header-nav">
           <li class="header-nav__item">
@@ -57,7 +52,7 @@
           </li>
         </ul>
         <div class="header-login">
-          <a class="header-login__link" data-remote="true" href="/users/sign_in">ログイン</a>
+          <a class="header-login__link" data-remote="true" href="#">ログイン</a>
         </div>
       </div>
       <div class="header-lang">
@@ -82,20 +77,19 @@
   </section>
   
   <div class="search">
-    <!-- <div class="search__head">
-      空室検索
-    </div> -->
     <div class="search__body">
       <form id="formSearch" action="/plans" method="POST">
         <div class="search__items">
           <span class="search__area">
-            <input type="text" name="" class="icon-area" placeholder="宿泊エリアを選択" readonly="">
-            <input type="hidden" value="">
+            <select class="icon-area">
+              <option value="0" selected>宿泊エリアを選択</option>
+              <option value="1" >東京</option>
+              <option value="2">大阪</option>
+              <option value="3">福岡</option>
+            </select>
           </span>
           <span class="search__calender">
-            <input type="text" name="" class="input-search" readonly="">
-            <!-- <input type="hidden">
-            <input type="hidden"> -->
+            <input type="date" name="" class="input-search">
           </span>
           <span class="search__sex">
             <input type="radio" name="gender" class="search__sex--input" id="search-sex-1" value="0">
@@ -119,14 +113,11 @@
   </div>
   
   
-  
-  <!-- .info-ttl -->
   <div class="info-ttl">
     <h2 class="info-ttl--main">INFORMATION</h2>
     <p class="info-ttl--sub">お知らせ</p>
-  </div><!--/ .info-ttl -->
+  </div>
   
-  <!-- .info -->
   <section class="info">
     <div class="info__block">
       <div class="info__item">
@@ -283,7 +274,6 @@
                 <span class="mainBtn__container--text">もっと見る</span>
               </div>
             </div>
-  
           </div>
         </div>
       </a>
@@ -320,7 +310,6 @@
             <span class="aboutCabin__ttlSub">ロイヤルプレミアム</span>
             <p class="aboutCabin__item--txt">よりリーズナブルに、<br class="hc-sp-hide">コンパクトな快適空間を追求しました</p>
             <div class="aboutCabin__item--btn">
-              <!-- <span class="btn--text">もっと見る</span> -->
               <div class="mainBtn__container">
                 <span class="mainBtn__container--text">もっと見る</span>
               </div>
@@ -341,7 +330,6 @@
             <span class="aboutCabin__ttlSub">コネクティングプレミアム</span>
             <p class="aboutCabin__item--txt">施錠も可能なコネクティングプレミアム<br class="hc-sp-hide">ご家族やご友人との宿泊に最適です。</p>
             <div class="aboutCabin__item--btn">
-              <!-- <span class="btn--text">もっと見る</span> -->
               <div class="mainBtn__container">
                 <span class="mainBtn__container--text">もっと見る</span>
               </div>
@@ -360,7 +348,6 @@
     </div>
   </div>
   
-    
   </main>
   
   
@@ -374,18 +361,18 @@
         <div class="footer__cont">
           <ul class="footer__cont--list">
             <li class="footer__cont--item">
-              <a href="/corporate/" class="footer__cont--link">企業情報</a>
+              <a href="#" class="footer__cont--link">企業情報</a>
             </li>
           </ul>
           <ul class="footer__cont--list">
             <li class="footer__cont--item">
-              <a href="/rules/" class="footer__cont--link">宿泊約款・規約</a>
+              <a href="#" class="footer__cont--link">宿泊約款・規約</a>
             </li>
             <li class="footer__cont--item">
-              <a href="/regulations/" class="footer__cont--link">予約システム利用規約</a>
+              <a href="#" class="footer__cont--link">予約システム利用規約</a>
             </li>
             <li class="footer__cont--item">
-              <a href="/privacy/" class="footer__cont--link">プライバシーポリシー</a>
+              <a href="#" class="footer__cont--link">プライバシーポリシー</a>
             </li>
             <li class="footer__cont--item">
               <a href="#" class="footer__cont--link" target="_blank">保護者同意書</a>
@@ -394,10 +381,10 @@
           <ul class="footer__cont--list">
             <li class="footer__cont--item">お問い合わせ</li>
             <li class="footer__cont--item">
-              <a href="/contact/" class="footer__cont--link footer__cont--linkSub">ご利用に関するお問い合わせ</a>
+              <a href="#" class="footer__cont--link footer__cont--linkSub">ご利用に関するお問い合わせ</a>
             </li>
             <li class="footer__cont--item">
-              <a href="/corporate/contact/" class="footer__cont--link footer__cont--linkSub">企業に関するお問い合わせ</a>
+              <a href="#" class="footer__cont--link footer__cont--linkSub">企業に関するお問い合わせ</a>
             </li>
           </ul>
         </div>
@@ -407,13 +394,11 @@
             <li class="footer-sns__list--word">FOLLOW US : </li>
             <li class="footer-sns__list--item">
               <a href="http://www.facebook.com/" target="_blank" class="footer-sns--link">
-                <!-- <img src="images/record.png" alt="Facebook" class="footer-sns--image"> -->
                 <div class="footer-sns--images">
                   <i class="fab fa-facebook-square fa-2x" style="color: white;"></i>
                 </div>
               </a>
               <a href="https://twitter.com/" target="_blank" class="footer-sns--link">
-                <!-- <img src="images/record.png" alt="Twitter" class="footer-sns--image"> -->
                 <div class="footer-sns--images">
                   <i class="fab fa-twitter-square fa-2x" style="color: white;"></i>
                 </div>
