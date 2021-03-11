@@ -413,6 +413,13 @@ main {
       width: 100%;
       height: 100vh;
       overflow: hidden;
+      .dark {
+        background-color:rgba(10, 10, 10, 0.6);
+        width: 100%;
+        height: 100%;
+        background-blend-mode: darken;
+        opacity: 0.3;
+      }
       #img01 {
         @include img();
         animation: slider01 30s infinite;
@@ -859,7 +866,8 @@ main {
           margin: 0 auto;
         }
         .compactLuxury-btn {
-          opacity: 1; 
+          opacity: 1;
+          visibility: visible;
           .mainBtn {
             margin-top: 50px;
             @include btn();
